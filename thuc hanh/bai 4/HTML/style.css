@@ -1,0 +1,68 @@
+.body{
+    margin: 0 auto;
+    width: 960px;
+    height: 1508px;
+    border:solid 4px black;
+}
+.header{
+    color: #A9F5A9;
+    text-align: left;
+    height: 90px;
+    background-color:#070B19 ;
+    padding-left: 25px;
+    line-height: 7px;
+    /*margin-top: 20px;*/
+    padding-top: 30px;
+    font-family: 'Roboto Slab', serif;
+}
+.tieude{
+ text-align: right;
+}
+.vt{
+    padding-left: 100px;
+}
+.left{
+    float: left;
+    width: 360px;
+    height: 1280px;
+    background-color: #3B0B17;
+    color: #FFFF;
+    border-top:solid 4px white ;
+}
+#text{
+    padding-left:15px;
+}
+.center{
+
+}
+div.center{
+    float: left;
+    width: 596px;
+    height: 1220px;
+    background-color: #848484;
+    padding-top: 60px;
+    border-left: solid 4px white;
+    border-top: solid 4px white;
+    border-bottom: solid 4px white;
+}
+.listCenter1{
+    margin-left: 50px;
+}
+#listCenter2{
+    line-height: 40px;
+}
+#textCenter1{
+    line-height: 35px;
+}
+.foot{
+    clear: left;
+    margin: 0 auto;
+    width: 960px;
+    background-color: #070B19;
+    height: 100px;
+    color: #FFFF;
+}
+#gioiThieu{
+    padding-top: 10px;
+    padding-left: 20px;
+}

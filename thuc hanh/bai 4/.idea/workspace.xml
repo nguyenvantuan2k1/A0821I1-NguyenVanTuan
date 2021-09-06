@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="03cd39a3-b8ab-4d2b-ab74-7f4b360a01dd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../bai 5/Bang_nang_cao_CoVua.html" beforeDir="false" afterPath="$PROJECT_DIR$/../bai 5/Bang_nang_cao_CoVua.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai 5/Tao_Form_co_ban.html" beforeDir="false" afterPath="$PROJECT_DIR$/../bai 5/Tao_Form_co_ban.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai 5/Tao_bang_co_ban.html" beforeDir="false" afterPath="$PROJECT_DIR$/../bai 5/Tao_bang_co_ban.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai 5/Tao_bang_don_gian.html" beforeDir="false" afterPath="$PROJECT_DIR$/../bai 5/Tao_bang_don_gian.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai 5/Tao_bang_nang_cao.html" beforeDir="false" afterPath="$PROJECT_DIR$/../bai 5/Tao_bang_nang_cao.html" afterDir="false" />
-    </list>
+    <list default="true" id="03cd39a3-b8ab-4d2b-ab74-7f4b360a01dd" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +20,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bai 6" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -38,6 +32,7 @@
       <option name="presentableId" value="Default" />
       <updated>1630860014210</updated>
       <workItem from="1630860015400" duration="14000" />
+      <workItem from="1630932911866" duration="100000" />
     </task>
     <servers />
   </component>

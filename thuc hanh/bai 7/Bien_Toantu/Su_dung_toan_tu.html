@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng toán tử</title>
+</head>
+<body>
+<h4>TÍNH DIỆN TÍCH HÌNH CHỮ NHẬT</h4>
+</br>
+<label>nhâp chiều dài</label>
+</br>
+<input id="length" type="text"/>
+</br>
+<label>nhâp chiều rộng</label>
+</br>
+<input id="width" type="text"/>
+</br></br>
+<button id="results">result</button>
+</br>
+<hr style="width: 200px; float: left"/>
+</br>
+<textarea id="kqs" style="width: 300px"></textarea>
+<script>
+    var rs = document.getElementById("results");
+    rs.addEventListener("click", clickFunction);
+
+    function clickFunction() {
+        var l = parseFloat(document.getElementById("length").value);
+        var w = parseFloat(document.getElementById("width").value);
+        var kq = l * w;
+        document.getElementById("kqs").innerText = kq;
+        alert(" kết quả là : " + kq);
+    }
+</script>
+</body>
+</html>

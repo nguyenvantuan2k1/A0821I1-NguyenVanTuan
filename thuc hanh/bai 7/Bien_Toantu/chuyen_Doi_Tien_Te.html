@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+    <style>
+        ul{
+            list-style-type: none;
+        }
+        li {
+            width: 120px;
+            margin-left: 100px;
+            float:left;
+        }
+        .inp{
+            margin-left: 100px;
+        }
+        #btn{
+            background-color: darkblue;
+            color: white;
+        }
+        #res{
+            text-align: center;
+            margin-left: 60px;
+        }
+        label{
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>
+        Amount
+    </li>
+    <li>
+        From Curency
+    </li>
+    <li>
+        To Currentcy
+    </li>
+</ul>
+<form method="get" action="#" name="chuyendoi">
+    </br>
+    </br>
+    <input class="inp" id="money" type="text"/>
+    <select class="inp" id="select1">
+        <option value="VND">Viet Nam</option>
+        <option value="USD">My</option>
+    </select>
+    <select class="inp" id="select2">
+        <option value="VND">Viet Nam</option>
+        <option value="USD">My</option>
+    </select>
+    <button class="inp" id="btn"> Change</button>
+</form>
+</br></br>
+<label>result :</label>
+<textarea id="res"></textarea>
+
+<script>
+    var changes=document.getElementById("btn");
+    changes.addEventListener("click",caculator);
+    function caculator(){
+        var input=parseFloat(document.getElementById("money").value);
+        var a= document.getElementById("select1").value;
+        var b=document.getElementById("select2").value;
+        var result;
+        if(a==="VND") {
+            if(b==="USD"){
+                result =parseFloat(input/23000).toFixed(2);
+            }else
+                result=input;
+        }else{
+            if(b!=="USD")
+                result=parseFloat(input*23000).toFixed(2);
+            else
+                result=input;
+        }
+        document.getElementById("res").innerText=result;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập biến kiểu dữ liệu và toán tử</title>
+</head>
+<body>
+       <h3>Bài 1: tính điểm học sinh </h3>
+        <label>Nhập điểm Toán</label>
+        </br>
+        <input id="marth" type="text"/>
+        </br>
+        <label>Nhập điểm Lý</label>
+        </br>
+        <input id="physical" type="text"/>
+        </br>
+        <label>Nhập điểm Hóa</label>
+        </br>
+        <input id="chemistry" type="text"/>
+        </br></br>
+        <label> Điểm trung bình : </label>
+        <textarea id="kq1" style="width: 300px"></textarea>
+        </br></br>
+        <label> Tổng điểm : </label>
+        <textarea id="kq1_1" style="width: 300px"></textarea>
+        <hr>
+
+        <h3>Bài 2: Chuyển đổi nhiệt độ </h3>
+        <label>Nhập độ C</label>
+        </br>
+        <input id="celcius" type="text"/>
+        </br></br>
+        <label>Độ F :</label>
+        <textarea id="kq2" style="width: 300px"></textarea>
+        </br>
+        <hr>
+
+        <h3>Bài 4,5: Tính chu vi diện tích hình tròn </h3>
+        <label>Nhập chiều dài</label>
+        </br>
+        <input id="length" type="text"/>
+        </br>
+        <label>Nhập chiều rộng</label>
+        </br>
+        <input id="width" type="text"/>
+        </br></br>
+        <label>chu vi :</label>
+        <textarea id="kq3" style="width: 300px"></textarea>
+        </br></br>
+        <label>Dien tich :</label>
+        <textarea id="kq4" style="width: 300px"></textarea>
+        </br></br>
+        <button id="results" style="font-size: 30px;font-weight: 600px; width: 100px;height: 60px;background-color: red;color: white">result</button>
+<script>
+    var bt1=document.getElementById("results");
+    bt1.addEventListener("click",kq);
+    function kq(){
+        //bai 1
+        var mar=parseFloat(document.getElementById("marth").value);
+        var phy=parseFloat(document.getElementById("physical").value);
+        var che=parseFloat(document.getElementById("chemistry").value);
+        var dtb=parseFloat((mar+phy+che)/3).toFixed(2);
+        var tong=mar+phy+che;
+        document.getElementById("kq1").innerText=dtb;
+        document.getElementById("kq1_1").innerText=tong;
+
+        //bai 2
+        var doC=parseFloat(document.getElementById("celcius").value);
+        var doF=parseFloat(1.8*doC+32).toFixed(2);
+        document.getElementById("kq2").innerText=doF;
+
+        //bai 3 + 4
+        var l=parseFloat(document.getElementById("length").value);
+        var w=parseFloat(document.getElementById("width").value);
+        var area=parseFloat(l*w).toFixed(2);
+        var primester=parseFloat((l+w)*2).toFixed(2);
+        document.getElementById("kq3").innerText=primester;
+        document.getElementById("kq4").innerText=area;
+    }
+</script>
+</body>
+</html>

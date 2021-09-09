@@ -6,11 +6,21 @@
     <style>
         input {
             float: left;
+            margin-left: 30px;
+        }
+        label{
+            float: left;
+            margin-left: 30px;
+        }
+        p{
+            margin-left: 200px;
         }
     </style>
 </head>
 <body>
+<label>number 1 :</label>
 <input type="text" id="num1"/>
+<label>number 2 :</label>
 <input type="text" id="num2"/>
 </br>
 <p>
@@ -22,17 +32,34 @@
 <label>result</label>
 <textarea id="result"></textarea>
 <script>
-    // var numb1 = parseFloat(document.getElementById("num1").value);
-    // var numb2 = parseFloat(document.getElementById("num2").value);
-    // var cal = document.getElementById("Add");
-    // cal.addEventListener("click", plus);
-    // var rs=function plus() {
-    //     return numb1+numb2;
-    // }
-    // document.getElementById("result").innerText(rs);
-
-
-    // chưa xong
+    var cal = document.getElementById("Add");
+    cal.addEventListener("click", plus);
+        function plus() {
+            var numb1 = parseFloat(document.getElementById("num1").value);
+            var numb2 = parseFloat(document.getElementById("num2").value);
+         document.getElementById("result").innerText=numb1+numb2;
+     }
+    var cal = document.getElementById("Sub");
+    cal.addEventListener("click", sub);
+    function sub() {
+        var numb1 = parseFloat(document.getElementById("num1").value);
+        var numb2 = parseFloat(document.getElementById("num2").value);
+        document.getElementById("result").innerText=numb1-numb2;
+    }
+    var cal = document.getElementById("Mul");
+    cal.addEventListener("click", mul);
+    function mul() {
+        var numb1 = parseFloat(document.getElementById("num1").value);
+        var numb2 = parseFloat(document.getElementById("num2").value);
+        document.getElementById("result").innerText=numb1*numb2;
+    }
+    var cal = document.getElementById("Div");
+    cal.addEventListener("click", div);
+    function div() {
+        var numb1 = parseFloat(document.getElementById("num1").value);
+        var numb2 = parseFloat(document.getElementById("num2").value);
+        document.getElementById("result").innerText=parseFloat(numb1/numb2).toFixed(2);
+    }
 
 </script>
 </body>

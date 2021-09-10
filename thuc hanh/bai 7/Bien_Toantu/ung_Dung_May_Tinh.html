@@ -24,41 +24,64 @@
 <input type="text" id="num2"/>
 </br>
 <p>
-    <button id="Add">Add(+)</button>
-    <button id="Sub">Sub(-)</button>
-    <button id="Mul">Mul(*)</button>
-    <button id="Div">Div(/)</button>
+    <button onclick="calBasic('+')">Add(+)</button>
+    <button onclick="calBasic('-')">Sub(-)</button>
+    <button onclick="calBasic('*')">Mul(*)</button>
+    <button onclick="calBasic('/')">Div(/)</button>
 </p>
 <label>result</label>
 <textarea id="result"></textarea>
 <script>
-    var cal = document.getElementById("Add");
-    cal.addEventListener("click", plus);
-        function plus() {
-            var numb1 = parseFloat(document.getElementById("num1").value);
-            var numb2 = parseFloat(document.getElementById("num2").value);
-         document.getElementById("result").innerText=numb1+numb2;
-     }
-    var cal = document.getElementById("Sub");
-    cal.addEventListener("click", sub);
-    function sub() {
-        var numb1 = parseFloat(document.getElementById("num1").value);
-        var numb2 = parseFloat(document.getElementById("num2").value);
-        document.getElementById("result").innerText=numb1-numb2;
-    }
-    var cal = document.getElementById("Mul");
-    cal.addEventListener("click", mul);
-    function mul() {
-        var numb1 = parseFloat(document.getElementById("num1").value);
-        var numb2 = parseFloat(document.getElementById("num2").value);
-        document.getElementById("result").innerText=numb1*numb2;
-    }
-    var cal = document.getElementById("Div");
-    cal.addEventListener("click", div);
-    function div() {
-        var numb1 = parseFloat(document.getElementById("num1").value);
-        var numb2 = parseFloat(document.getElementById("num2").value);
-        document.getElementById("result").innerText=parseFloat(numb1/numb2).toFixed(2);
+    // var cal = document.getElementById("Add");
+    // cal.addEventListener("click", plus);
+    //     function plus() {
+    //         var numb1 = parseFloat(document.getElementById("num1").value);
+    //         var numb2 = parseFloat(document.getElementById("num2").value);
+    //      document.getElementById("result").innerText=numb1+numb2;
+    //  }
+    // var cal = document.getElementById("Sub");
+    // cal.addEventListener("click", sub);
+    // function sub() {
+    //     var numb1 = parseFloat(document.getElementById("num1").value);
+    //     var numb2 = parseFloat(document.getElementById("num2").value);
+    //     document.getElementById("result").innerText=numb1-numb2;
+    // }
+    // var cal = document.getElementById("Mul");
+    // cal.addEventListener("click", mul);
+    // function mul() {
+    //     var numb1 = parseFloat(document.getElementById("num1").value);
+    //     var numb2 = parseFloat(document.getElementById("num2").value);
+    //     document.getElementById("result").innerText=numb1*numb2;
+    // }
+    // var cal = document.getElementById("Div");
+    // cal.addEventListener("click", div);
+    // function div() {
+    //     var numb1 = parseFloat(document.getElementById("num1").value);
+    //     var numb2 = parseFloat(document.getElementById("num2").value);
+    //     document.getElementById("result").innerText=parseFloat(numb1/numb2).toFixed(2);
+    // }
+
+    function calBasic(input) {
+        const numb1 = parseFloat(document.getElementById("num1").value);
+        const numb2 = parseFloat(document.getElementById("num2").value);
+        var result = 0;
+        console.log("result: " + result);
+        console.log(input);
+        switch (input) {
+            case '+':
+                result = numb1 + numb2;
+                break;
+            case '-':
+                result = numb1 - numb2;
+                break;
+            case '*':
+                result = numb1 * numb2;
+                break;
+            case '/':
+                result = numb1 / numb2;
+                break;
+        }
+        document.getElementById("result").innerText = result;
     }
 
 </script>

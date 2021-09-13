@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập số ngày</title>
+</head>
+<body>
+<label>Nhập tháng :</label>
+<input type="text" id="ngay">
+<button onclick="caculator()"> Tính số ngày</button>
+</br></br>
+<label>result</label>
+<textarea id="result"></textarea>
+<script>
+    function caculator(){
+        let day= parseInt(document.getElementById("ngay").value);
+        var rs;
+        switch (day){
+            case 1:case 3:case 5:case 7:case 11:
+                rs='31';
+                break;
+            case 2:
+                rs='29 or 28';
+                break;
+            case 4:case 6:case 8:case 10:case 12:
+                rs='30';
+                break;
+            default: rs='invalid';
+        }
+        document.getElementById("result").innerText=rs;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+</head>
+<body>
+<p>
+    <img alt="" src="../img/hinh2.png"
+         style="height: 200px; width: auto" id="imgClickAndChange1" onclick="changeImage1()"/>
+    <img alt="" src="../img/hinh1_1.png"
+         style="height: 200px; width: auto" id="imgClickAndChange2" onclick="changeImage2()"/>
+</p>
+<script>
+    function check() {
+        let s1 = document.getElementById("imgClickAndChange1").getAttribute("src");
+        let s2 = document.getElementById("imgClickAndChange2").getAttribute("src");
+        if ((s1 == "../img/hinh1.png") && (s2 == "../img/hinh1_1.png")) {
+            $('img').css("box-shadow", "4px 4px 9px red")
+        }
+        if ((s1 == "../img/hinh2.png") && (s2 == "../img/hinh2_2.png")) {
+            $('img').css("box-shadow", "4px 4px 9px red")
+        }
+        if ((s1 == "../img/hinh3.png") && (s2 == "../img/hinh3_3.png")) {
+            $('img').css("box-shadow", "4px 4px 9px red")
+        }
+    }
+
+    function changeImage1() {
+        let s1 = document.getElementById("imgClickAndChange1").getAttribute("src");
+        if (s1 == "../img/hinh1.png") {
+            document.getElementById("imgClickAndChange1").src = "../img/hinh2.png";
+        } else if (s1 == "../img/hinh2.png") {
+            document.getElementById("imgClickAndChange1").src = "../img/hinh3.png";
+        } else {
+            document.getElementById("imgClickAndChange1").src = "../img/hinh1.png";
+        }
+        check();
+    }
+
+    function changeImage2() {
+        let s2 = document.getElementById("imgClickAndChange2").getAttribute("src");
+        if (s2 == "../img/hinh1_1.png") {
+            document.getElementById("imgClickAndChange2").src = "../img/hinh2_2.png";
+        } else if (s2 == "../img/hinh2_2.png") {
+            document.getElementById("imgClickAndChange2").src = "../img/hinh3_3.png";
+        } else {
+            document.getElementById("imgClickAndChange2").src = "../img/hinh1_1.png";
+        }
+        check();
+    }
+</script>
+
+</body>
+</html>

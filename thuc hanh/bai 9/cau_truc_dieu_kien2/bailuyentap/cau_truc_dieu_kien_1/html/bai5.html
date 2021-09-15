@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xếp loại học lực</title>
+</head>
+<body>
+<script>
+    let kt = parseFloat(prompt("nhập điểm kiểm tra"));
+    let gk = parseFloat(prompt("nhập điểm kiểm tra giữa kì"));
+    let ck = parseFloat(prompt("nhập điểm kiểm tra cuối kì"));
+
+    let tb = parseFloat((kt + gk * 2 + ck * 3) / 6).toFixed(2);
+    alert(tb);
+    if (tb >= '8') {
+        alert("Giỏi");
+    } else {
+        if (tb >= 7) {
+            alert("Khá");
+        } else {
+            if (tb >= '5') {
+                alert("Trung bình");
+            } else {
+                if (tb >= '3') {
+                    alert("Yếu");
+                } else {
+                    alert("Kém");
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

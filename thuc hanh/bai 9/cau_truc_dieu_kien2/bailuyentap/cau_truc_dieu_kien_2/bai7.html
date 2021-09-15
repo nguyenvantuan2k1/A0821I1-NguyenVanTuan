@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+<script>
+    let a=parseFloat(prompt("nhập hệ số a :"));
+    let b=parseFloat(prompt("nhập hệ số b :"));
+    let c=parseFloat(prompt("nhập hệ số c :"));
+    let x1=0.0;
+    let x2=0.0;
+    let delta = b*b - 4*a*c;
+    if(delta<0){
+        alert("Phuong trinh da cho vo nghiem");
+    }
+    else if(delta==0){
+        x1 = -b/(2*a);
+        alert("Phuong trinh da cho co nghiem kep : x1=x2="+x1);
+    }
+    else{
+        delta = Math.sqrt(delta);
+        x1 = (-b + delta) / (2*a);
+        x2 = (-b - delta) / (2*a);
+        alert("Phuong trinh da cho co hai nghiem phan biet : x1="+x1+"  x2="+x2);
+    }
+</script>
+</body>
+</html>

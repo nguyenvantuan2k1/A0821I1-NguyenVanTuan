@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế</title>
+</head>
+<body>
+    <script>
+        let moneys=parseFloat(prompt("nhập số tiền thu nhập "));
+
+        if(moneys<10000000)
+            alert("tiền thuế là : "+moneys*0.5/100);
+        else if(moneys<20000000)
+            alert("tiền thuế là : "+moneys/100);
+        else if(moneys<30000000)
+            alert("tiền thuế là : "+moneys*1.5/100);
+        else  alert("tiền thuế là : "+moneys*3/100);
+    </script>
+</body>
+</html>

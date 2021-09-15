@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ứng dụng do you love me ?</title>
+    <style>
+    body{
+        text-align: center;
+        background-color: hotpink;
+        margin-top: 300px;
+    }
+    #btnYes{
+        height: 50px;
+        width: 100px;
+        margin-right: 50px;
+        border: black 2px solid;
+        border-radius: 100px;
+        font-size: 30px ;
+        background-color: red;
+        color: white;
+    }
+    #btnNo{
+        height: 50px;
+        width: 100px;
+        border: black 2px solid;
+        border-radius: 100px;
+        font-size: 30px ;
+        background-color: darkslategray;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+<h1 class="Question">Do you love me ?</h1>
+<input type="button" id="btnYes" value="YES" onclick="yesClick()" />
+<input type="button" id="btnNo" value="NO" onmouseover="noHover()" style="position: relative"/>
+</body>
+<script>
+    function yesClick() {
+        alert("I KNOW");
+    }
+    function noHover() {
+        var x = Math.floor(Math.random() * (window.innerWidth));
+        var y = Math.floor(Math.random() * (window.innerHeight));
+        document.getElementById("btnNo").style.left = x + "px";
+        document.getElementById("btnNo").style.top = y + "px";
+    }
+</script>
+</html>

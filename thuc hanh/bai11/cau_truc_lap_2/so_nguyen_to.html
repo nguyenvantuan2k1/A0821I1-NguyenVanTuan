@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị n số nguyên tố</title>
+</head>
+<body>
+<script>
+    function  check(x){
+        if (x <= 1) {
+            return false;
+        }
+        for (let i = 2; i <= Math.sqrt(x); i++) {
+            if (x % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    let n=prompt("nhập số lượng số nguyên tố cần in :")
+    let rs=" ";
+    let tmp=1;
+    let d=0;
+    while (d<n){
+        if(check(tmp)) {
+            rs +=tmp+" ";
+            d++;
+        }
+            tmp++;
+    }
+    document.write(rs);
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sinh bảng cửu chương</title>
+</head>
+<body>
+<p id="demo">
+
+</p>
+<script>
+    let sout;
+    sout = "<table border='1' width='800' cellspacing='0' cellpadding='3'>"
+    for(let row=1;row<=9;row++){
+        sout+="<tr>"
+        for(let col=2;col<=9;col++){
+            sout+="<td>"+col +" * "+ row+" = "+col*row+"</td>";
+        }
+        sout+="</tr>"
+    }
+    sout+="</table>";
+    document.write(sout);
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng vòng lặp lồng nhau</title>
+</head>
+<body>
+<script>
+  let sout, i, j;
+  sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+  i = j = 1;
+  // while (i <= 10) {
+  //   sout = sout + "<tr>";
+  //   while (j <= 10) {
+  //     sout = sout + "<td>" + i * j + "</td>";
+  //     j++;
+  //   }
+  //   sout = sout + "</tr>";
+  //   j = 1;
+  //   i++;
+  // }
+  sout+="<tr>"
+  let d=11;
+   for(i;i<=100;i++){
+  if(i%d==0) {
+      d+=10;
+      sout = sout + "</tr>";
+  }
+      sout=sout+"<td>"+i+"</td>";
+  if(i%10==0) {
+      sout = sout + "<tr>";
+  }
+   }
+  sout = sout + "</table>";
+  document.write(sout);
+</script>
+</body>
+</html>

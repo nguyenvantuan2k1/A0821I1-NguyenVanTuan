@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lương </title>
+</head>
+<body>
+<script>
+    let salary = parseFloat(prompt("Enter salary"));
+    let tax = 0;
+    if (salary == 15000000) {
+        tax = salary * 20 / 100;
+    } else if (salary < 15000000 && salary >= 7000000) {
+        tax = salary * 10 / 100;
+    } else if (salary < 7000000) {
+        tax = salary * 5 / 100;
+    }
+    salary-=tax;
+    document.write("số tiền lương nhận được là :"+salary+"  tiền thuế phải nộp là : "+tax);
+</script>
+</body>
+</html>

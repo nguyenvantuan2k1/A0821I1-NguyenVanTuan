@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n=parseInt(prompt("nhập vào số phần tử của mảng A"));
+    let arrA=[n-1];
+    for(let i=0;i<n;i++){
+        arrA[i]=parseInt(prompt("arrA["+(i+1)+"]="));
+    }
+    let k=parseInt(prompt("nhập vào số phần tử của mảng B"));
+    let arrB=[k-1];
+    for(let i=0;i<k;i++){
+        arrB[i]=parseInt(prompt("arrB["+(i+1)+"]="));
+    }
+    let rs='';
+    if(n>k) {
+        for (let i = 0; i < n; i++) {
+            let ok = true;
+            for (let j = 0; j < k; j++) {
+                if (arrA[i] == arrB[j]) {
+                    ok = false;
+                }
+            }
+            if (ok == true) {
+                rs += arrA[i] + " ";
+            }
+        }
+    }else {
+        for (let i = 0; i < k; i++) {
+            let ok = true;
+            for (let j = 0; j < n; j++) {
+                if (arrB[i] == arrA[j]) {
+                    ok = false;
+                }
+            }
+            if (ok == true) {
+                rs += arrB[i] + " ";
+            }
+        }
+    }
+    document.write(rs);
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n=parseInt(prompt("nhập vào số phần tử của mảng"));
+    let arr=[n-1];
+    for(let i=0;i<n;i++){
+        arr[i]=parseInt(prompt("arr["+(i+1)+"]="));
+    }
+    let rs=[n-1];
+    for(let k=0;k<n;k++){
+        let t=0;
+        for(j=0;j<=k;j++){
+            t+=arr[j];
+        }
+        rs[k]=t;
+    }
+    document.write(rs.toString());
+</script>
+</body>
+</html>

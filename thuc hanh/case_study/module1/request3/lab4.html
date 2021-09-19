@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển số sang chữ</title>
+</head>
+<body>
+<script>
+    let number=prompt("nhập vào một số :");
+    let rs='';
+    for(let i=0;i<number.length;i++){
+        switch (number[i]){
+            case '0': rs+='khong '; break;
+            case '1': rs+='mot '; break;
+            case '2': rs+='hai '; break;
+            case '3': rs+='ba '; break;
+            case '4': rs+='bon '; break;
+            case '5': rs+='nam '; break;
+            case '6': rs+='sau '; break;
+            case '7': rs+='bay '; break;
+            case '8': rs+='tam '; break;
+            case '9': rs+='chin '; break;
+            default :rs+number[i];
+        }
+    }
+    document.write(rs);
+</script>
+</body>
+</html>

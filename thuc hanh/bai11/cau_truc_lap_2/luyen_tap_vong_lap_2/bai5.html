@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi xuất ngân hàng</title>
+</head>
+<body>
+<script>
+    let moneys = parseFloat(prompt("nhập số tiền ban đầu :"));
+    let months = parseFloat(prompt("nhập số tháng vay :"));
+    let r = parseFloat(prompt("nhập phần trăm lãi xuất(%) :"));
+    let lai = 0;
+    for (let i = 1; i <= months; i++) {
+        lai = moneys - (moneys * r / 100);
+        moneys += lai;
+    }
+    document.write('số tiền phải trả tổng cộng là :' + moneys);
+</script>
+</body>
+</html>

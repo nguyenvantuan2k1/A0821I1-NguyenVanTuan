@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<input type="button" onclick="play()" value="Bắt đầu">
+<script>
+    function  play(){
+        alert("nhập khoảng số")
+        let canduoi=parseInt(prompt("từ"));
+        let cantren=parseInt(prompt("đến"));
+        let rd=Math.round(Math.random()*(cantren-canduoi)+canduoi);
+        console.log(rd);
+        let input=parseInt(prompt("nhập số bạn đoán"));
+
+        if(rd==input){
+            alert("chúc mừng bạn đã đoán đúng")
+        }else{
+            alert("rất tiếc bạn đã đoán sai")
+        }
+    }
+</script>
+</body>
+</html>

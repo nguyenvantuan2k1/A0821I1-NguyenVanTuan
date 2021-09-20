@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In hình trái tim</title>
+</head>
+<body style="text-align: center;margin-top: 300px">
+<script>
+
+    function inTim() {
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= 5; j++) {
+                if ((i == 1 && j == 1) || (i == 1 && j == 3) || (i == 1 && j == 5) || (i == 4 && j == 1) || (i == 4 && j == 5) || (i == 5 && j != 3)) {
+                    document.write("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+                } else {
+                    document.write("*&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+                }
+            }
+            document.write("</br>");
+            document.write("</br>");
+            document.write("</br>");
+        }
+    }
+    inTim();
+</script>
+</body>
+</html>

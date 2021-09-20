@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiếm tra nhiệt độ</title>
+</head>
+<body>
+<script>
+    let tem=parseFloat(prompt("nhập nhiệt độ"));
+    while(true) {
+        if (tem > 100) {
+            alert("vui lòng giảm nhiệt độ");
+            tem=parseFloat(prompt("nhập nhiệt độ"));
+        } else if (tem < 20) {
+            alert("vui lòng tăng nhiệt độ")
+            tem = parseFloat(prompt("nhập nhiệt độ"));
+        }
+        else {
+            alert("nhiệt độ thích hợp")
+            break;
+        }
+    }
+</script>
+</body>
+</html>

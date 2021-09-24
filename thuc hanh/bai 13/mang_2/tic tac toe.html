@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>caro</title>
+</head>
+<body style="text-align: center">
+<p id="banco"></p>
+
+<button type="button" onclick="nhap1()" hidden="none" id="chon1">player 1</button>
+<button type="button" onclick="nhap2()" hidden="none" id="chon2">player 2</button>
+<script>
+    let arr= new Array(3);
+        for(let row=0;row<arr.length;row++){
+            arr[row]= new Array(3);
+            for(let col=0;col<arr[row].length;col++){
+                arr[row][col]="-";
+            }
+        }
+        let table="";
+        for(let row=0;row<arr.length;row++){
+            for(let col=0;col<arr[row].length;col++){
+                table+=arr[row][col]+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+            }
+            table+="</br>";
+        }
+        document.getElementById("banco").innerHTML=table;
+        document.getElementById("start").hidden="none";
+        document.getElementById("chon1").hidden="";
+        document.getElementById("chon2").hidden="";
+    }
+    function nhap1(){
+        let r=prompt("nhập vị trí hàng muốn đánh");
+        let c=prompt("nhập vị trí cột muốn đánh ");
+        arr[r][c]="X";
+    }
+    function nhap2(){
+        let r=parseInt(prompt("nhập vị trí hàng muốn đánh"));
+        let c=parseInt(prompt("nhập vị trí cột muốn đánh "));
+        arr[r][c]="O";
+    }
+</script>
+</body>
+</html>

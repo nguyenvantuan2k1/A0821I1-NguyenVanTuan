@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+    <input type="text" id="words">
+    <button type="button" onclick="translates()">change</button>
+    <p id="value"></p>
+</body>
+<script>
+    let dv=["cho","meo","heo","ga"];
+    let animals=["dog","cat","pig","chick"];
+    let rs="";
+    function translates(){
+        let w=document.getElementById("words").value;
+        console.log(w);
+        for(let i=0;i<dv.length;i++){
+            if(w==dv[i]){
+                rs=animals[i];
+                break;
+            }else{
+                rs="not found";
+            }
+        }
+        document.getElementById("value").innerText=rs;
+    }
+</script>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chèn dấu - vào giữa số chẵn</title>
+</head>
+<body>
+<script>
+    let num = prompt("nhập vào một số");
+    let rs = "";
+    for (let i = 0; i < num.length; i++) {
+        if (parseInt(num[i]) % 2 == 0 && i != num.length - 1) {
+            rs += num[i] + "-";
+        } else rs += num[i];
+    }
+    document.write(rs);
+</script>
+</body>
+</html>

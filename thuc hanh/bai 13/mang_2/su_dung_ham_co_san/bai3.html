@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển thường sang hoa</title>
+</head>
+<body>
+<script>
+    var strings=prompt("nhập vào một chuỗi :");
+    var i=0;
+    var character='';
+    var rs="";
+    while (i < strings.length){
+        character = strings.charAt(i);
+        if (!isNaN(character[i] * 1)){
+            character=character;
+        }else{
+            if (character == character.toLowerCase()){
+                character=character.toUpperCase();
+            }else  character=character.toLowerCase();
+        }
+        rs+=character;
+        i++;
+    }
+    document.write(rs);
+</script>
+</body>
+</html>

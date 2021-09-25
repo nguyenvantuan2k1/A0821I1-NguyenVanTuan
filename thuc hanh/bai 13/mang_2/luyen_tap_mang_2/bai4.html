@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số từ trong 1 chuỗi</title>
+</head>
+<body>
+<script>
+    let s=prompt("nhập vào 1 chuỗi dũ liệu :");
+    s=s.replace(/\s+/g, ' ')
+    let d=1;
+    for(let i=0;i<s.length;i++){
+        if(s[i]==" ")
+            d++;
+    }
+    alert("số từ :"+d);
+</script>
+</body>
+</html>

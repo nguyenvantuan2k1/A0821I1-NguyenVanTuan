@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sắp xếp mảng giảm dần</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhập số lượng phần tử");
+    let arr = new Array(n);
+    for (let i = 0; i <n; i++) {
+        arr[i]=prompt("nhập ptu thứ " + i);
+    }
+    arr.sort(function (a,b){
+      return  b-a;
+    });
+    document.write("các giá trị của mảng sau khi xắp xếp :"+arr.toString()+"<br>");
+</script>
+</body>
+</html>

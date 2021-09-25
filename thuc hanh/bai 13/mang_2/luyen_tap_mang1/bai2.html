@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm phần tử lớn nhất và vị trí của nó</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("nhập số lượng phần tử"));
+    let arr = [];
+    for (let i = 0; i <n; i++) {
+        let tmp = prompt("nhập ptu thứ " + i);
+        arr[i]=tmp;
+    }
+    var max=arr[0];
+    var ind=0;
+    for (let i = 0; i <=n; i++) {
+        if(arr[i]>max){
+            max=arr[i];
+            ind=i;
+        }
+    }
+    document.write("các giá trị của mảng :"+arr.toString()+"<br>");
+    document.write("phần tử lớn nhất là : "+max+" vị trí :"+ind);
+</script>
+</body>
+</html>

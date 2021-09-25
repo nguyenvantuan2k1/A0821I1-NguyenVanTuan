@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thay đổi - bằng _ trong mảng kí tự</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhập số lượng kí tự");
+    let arr = new Array(n);
+    for (let i = 0; i < n; i++) {
+        arr[i] = prompt("nhập kí tự thứ :" + i);
+    }
+    for(let i=0;i<n;i++){
+        if(arr[i]=='-')
+            arr[i]='_';
+    }
+    document.write("mảng phần tử sau khi đổi:" + arr.join());
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In mảng 2 chiều</title>
+</head>
+<body>
+<script>
+    let row=parseInt(prompt("nhập số hàng :"));
+    let col=parseInt(prompt("nhập số cột :"));
+
+    let arr2d= new Array(row);
+
+    for(let i=0;i<arr2d.length;i++){
+        arr2d[i]= new Array(col);
+            for(let j=0;j<arr2d[i].length;j++){
+                let element= prompt("nhập giá trị ptu : ["+i+"]["+j+"] :");
+                arr2d[i][j]=element;
+        }
+    }
+    for(let i=0;i<arr2d.length;i++){
+        document.write("row "+i+"<br>");
+        for(let j=0;j<arr2d[i].length;j++){
+            document.write(arr2d[i][j]+"<br>")
+        }
+    }
+
+</script>
+</body>
+</html>

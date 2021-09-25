@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược mảng 2 chiều</title>
+</head>
+<body>
+<script>
+    let row = parseInt(prompt("nhập số hàng :"));
+    let col = parseInt(prompt("nhập số cột :"));
+
+    let arr2d = new Array(row);
+
+    for (let i = 0; i < arr2d.length; i++) {
+        arr2d[i] = new Array(col);
+        for (let j = 0; j < arr2d[i].length; j++) {
+            let element = prompt("nhập giá trị ptu : [" + i + "][" + j + "] :");
+            arr2d[i][j] = element;
+        }
+    }
+    for (let i = arr2d.length-1; i>=0; i--) {
+        for (let j = arr2d.length-1; j >=0; j--) {
+            document.write(arr2d[i][j] + "&nbsp&nbsp");
+        }
+        document.write("</br>")
+    }
+
+</script>
+</body>
+</html>

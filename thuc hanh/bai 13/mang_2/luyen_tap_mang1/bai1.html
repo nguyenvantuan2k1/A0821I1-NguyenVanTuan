@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm số lớn hơn 10</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("nhập số lượng phần tử"));
+    let arr = new Array(n);
+    for (let i = 0; i < n; i++) {
+        let tmp = prompt("nhập ptu thứ " + i);
+        arr[i] = tmp;
+    }
+    let d = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i]>10){
+            d++;
+        }
+    }
+    document.write("số phần tử lớn hơn 10 là : "+d);
+</script>
+</body>
+</html>

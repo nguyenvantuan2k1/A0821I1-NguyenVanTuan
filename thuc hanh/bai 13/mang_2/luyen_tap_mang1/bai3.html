@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trung bình mảng</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhập số lượng phần tử");
+    let arr = new Array(n);
+    for (let i = 0; i <n; i++) {
+        arr[i]=prompt("nhập ptu thứ " + i);
+    }
+    let max=arr[0];
+    let sum=0;
+    for (let i = 0; i <n; i++) {
+        sum+=arr[i];
+        if(arr[i]>max){
+            max=arr[i];
+        }
+    }
+    sum=sum/n;
+    document.write("các giá trị của mảng :"+arr.toString()+"<br>");
+    document.write("giá trị lớn nhất là : "+max+"<br>");
+    document.write("giá trị trung bình là : " +sum);
+</script>
+</body>
+</html>

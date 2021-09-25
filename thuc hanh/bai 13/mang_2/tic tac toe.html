@@ -5,39 +5,84 @@
     <title>caro</title>
 </head>
 <body style="text-align: center">
+<p>0&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp1&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2</p>
 <p id="banco"></p>
-
-<button type="button" onclick="nhap1()" hidden="none" id="chon1">player 1</button>
-<button type="button" onclick="nhap2()" hidden="none" id="chon2">player 2</button>
+<button type="button" onclick="nhap1()" id="chon1">player 1</button>
+<button type="button" onclick="nhap2()" id="chon2">player 2</button>
 <script>
-    let arr= new Array(3);
-        for(let row=0;row<arr.length;row++){
-            arr[row]= new Array(3);
-            for(let col=0;col<arr[row].length;col++){
-                arr[row][col]="-";
-            }
+
+    let arr = new Array(3);
+    for (let row = 0; row < arr.length; row++) {
+        arr[row] = new Array(3);
+        for (let col = 0; col < arr[row].length; col++) {
+            arr[row][col] = "-";
         }
-        let table="";
-        for(let row=0;row<arr.length;row++){
-            for(let col=0;col<arr[row].length;col++){
-                table+=arr[row][col]+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
-            }
-            table+="</br>";
+    }
+    let tables = "";
+    for (let row = 0; row < arr.length; row++) {
+        tables+=(row)+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+        for (let col = 0; col < arr[row].length; col++) {
+            tables +=arr[row][col] + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
         }
-        document.getElementById("banco").innerHTML=table;
-        document.getElementById("start").hidden="none";
-        document.getElementById("chon1").hidden="";
-        document.getElementById("chon2").hidden="";
+        tables += "</br>";
     }
-    function nhap1(){
-        let r=prompt("nhập vị trí hàng muốn đánh");
-        let c=prompt("nhập vị trí cột muốn đánh ");
-        arr[r][c]="X";
+    document.getElementById("banco").innerHTML = tables;
+    function nhap1() {
+        let r = prompt("nhập vị trí hàng muốn đánh");
+        let c = prompt("nhập vị trí cột muốn đánh ");
+        arr[r][c] = "X";
+        let tables = "";
+        for (let row = 0; row < arr.length; row++) {
+            tables+=(row)+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+            for (let col = 0; col < arr[row].length; col++) {
+                tables +=arr[row][col] + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+            }
+            tables += "</br>";
+        }
+        document.getElementById("banco").innerHTML = tables;
+        check();
     }
-    function nhap2(){
-        let r=parseInt(prompt("nhập vị trí hàng muốn đánh"));
-        let c=parseInt(prompt("nhập vị trí cột muốn đánh "));
-        arr[r][c]="O";
+
+    function nhap2() {
+        let r = parseInt(prompt("nhập vị trí hàng muốn đánh"));
+        let c = parseInt(prompt("nhập vị trí cột muốn đánh "));
+        arr[r][c] = "O";
+        let tables = "";
+        for (let row = 0; row < arr.length; row++) {
+            tables+=(row)+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+            for (let col = 0; col < arr[row].length; col++) {
+                tables +=arr[row][col] + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+            }
+            tables += "</br>";
+        }
+        document.getElementById("banco").innerHTML = tables;
+    }
+    function check(){
+        let ok=false;
+        //kiem tra hang ngang
+        //  for(let row=0;row<arr.length;row++){
+        //      let tmp=new Array(3);
+        //      for(let col=0;col<arr[row].length;col++){
+        //          tmp[col]=arr[row][col];
+        //      }
+        //      if(tmp[0]==tmp[1]&&tmp[0]==tmp[2]){
+        //          ok=true;
+        //          break;
+        //      }
+        //  }
+        //  //kiem tra đường chéo chính
+        // let tmps=new Array(3);
+        // for(let i=0;i<arr.length;i++){
+        //     tmps.push(arr[i][i]);
+        // }
+        // alert(tmps.toString());
+        // for(let i=0;i<tmps.length;i++){
+        //
+        // }
+         if(ok){
+             alert("chúc mừng bạn đã chiến thắng");
+         }
+
     }
 </script>
 </body>

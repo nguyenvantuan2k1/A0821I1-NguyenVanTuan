@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đếm số kí tự số</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhập số lượng phần tử");
+    let arr = new Array(n);
+    for (let i = 0; i < n; i++) {
+        arr[i] = prompt("nhập ptu thứ " + i);
+    }
+
+    function isNumber(n) {
+        return !isNaN(parseFloat(n)) && !isNaN(n - 0)
+    }
+
+    let d = 0;
+    for (let i = 0; i < n; i++) {
+        if (isNumber(arr[i]))
+            d++;
+            }
+    document.write("giá trị các phần tử trong mảng :" + arr.toString()+"<br>");
+    document.write("số lượng ptu có giá trị là số :" + d);
+
+</script>
+</body>
+</html>

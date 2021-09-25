@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số âm</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhập số lượng phần tử");
+    let arr = new Array(n);
+    for (let i = 0; i <n; i++) {
+        arr[i]=prompt("nhập ptu thứ " + i);
+    }
+    let d=0;
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]<0)
+            d++;
+    }
+    document.write("các giá trị của mảng :"+arr.toString()+"<br>");
+    document.write("số phần tử âm là : "+d);
+</script>
+</body>
+</html>

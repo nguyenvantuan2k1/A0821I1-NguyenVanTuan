@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nối 2 mảng</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhập số lượng phần tử mảng a");
+    let a = new Array(n);
+    for (let i = 0; i <n; i++) {
+        a[i]=prompt("nhập ptu thứ " + i);
+    }
+    let m = prompt("nhập số lượng phần tử mảng b");
+    let b = new Array(n);
+    for (let i = 0; i <m; i++) {
+        b[i]=prompt("nhập ptu thứ " + i);
+    }
+    let c=a.concat(b);
+    document.write("các giá trị của mảng sau khi nối :"+c.toString()+"<br>");
+</script>
+</body>
+</html>

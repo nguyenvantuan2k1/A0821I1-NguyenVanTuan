@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm kiếm phần tử</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhập số lượng phần tử");
+    let arr = new Array(n);
+    for (let i = 0; i <n; i++) {
+        arr[i]=prompt("nhập ptu thứ " + i);
+    }
+    let v=prompt("nhập vào 1 số để kiểm tra");
+    let check=false;
+    for(let i=0;i<n;i++){
+        if(v==arr[i])
+            check=true;
+    }
+    (check==true)?alert("phần tử "+v+" có trong mảng"):alert("phần tử "+v+" không có trong mảng");
+</script>
+</body>
+</html>

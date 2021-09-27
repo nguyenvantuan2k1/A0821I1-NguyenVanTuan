@@ -13,11 +13,59 @@
     <li><h4>4. nước ép cà chua</h4></li>
     <li><h4>5. nước lọc</h4></li>
     <li><h4>6. nước dừa</h4></li>
-    <li><h4>7. thoát menu</h4></li>
+    <li><h4>Ấn số bất kì để thoát menu</h4></li>
 </ul>
+<button type="button" onclick="choice()">Chọn</button>
 <script>
     let price=[20000,30000,30000,30000,10000,40000];
-    let chosse=parseInt(prompt("mời quý khách chọn số"))
+    let bill=[];
+    function choice(){
+        do{
+            let chosse = parseInt(prompt("mời quý khách chọn số"));
+            switch (chosse) {
+                case 1: {
+                    bill.push("cafe");
+                    bill.push(price[0]);
+                    break;
+                }
+                case 2:{
+                    bill.push("cam vắt");
+                    bill.push(price[1]);
+                    break;
+                }
+                case 3:{
+                    bill.push("nước ép cà rốt");
+                    bill.push(price[2]);
+                    break;
+                }
+                case 4:{
+                    bill.push("nước ép cà chua");
+                    bill.push(price[3]);
+                    break;
+                }
+                case 5:{
+                    bill.push("nước lọc");
+                    bill.push(price[4]);
+                    break;
+                }
+                case 6:{
+                    bill.push("nước dừa");
+                    bill.push(price[5]);
+                    break;
+                }
+                default: {
+                    document.write("<h3>hóa đơn</h3>")
+                    for(let i=0;i<bill.length;i++){
+                        if(i%2==0){
+                            document.write("</br>");
+                        }
+                        document.write(bill[i] +" ");
+                    }
+                    return 0;
+                }
+            }
+        }while (true)
+    }
 </script>
 </body>
 </html>

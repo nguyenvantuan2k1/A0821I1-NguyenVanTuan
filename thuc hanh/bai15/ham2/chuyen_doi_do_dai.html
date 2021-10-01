@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi độ dài</title>
+</head>
+<body>
+<script>
+    function feetToMeter(feet){
+        return 0.305 * feet;
+
+    }
+    function meterToFeet(meter){
+        return 3.279 * meter;
+    }
+        let x = prompt("nhập 1 để đổi từ m->feet , nhập 2 để đổi từ feet->m")
+        t=prompt("nhập chiều dài : ");
+        if(x==1) document.write("m -> feet : "+meterToFeet(t));
+        else document.write("feet-> m : "+feetToMeter(t));
+</script>
+</body>
+</html>

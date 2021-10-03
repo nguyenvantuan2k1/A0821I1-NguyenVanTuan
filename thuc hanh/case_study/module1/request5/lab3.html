@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm phần tử bé nhất và lớn nhất trong mảng 2 chiều</title>
+</head>
+<body>
+<script>
+    let row=parseInt(prompt("nhập số hàng :"));
+    let col=parseInt(prompt("nhập số cột :"));
+
+    let arr2d= new Array(row);
+
+    function timMinMax(){
+        //nhap mang
+        for(let i=0;i<arr2d.length;i++){
+            arr2d[i]= new Array(col);
+            for(let j=0;j<arr2d[i].length;j++){
+                let element= parseInt(prompt("nhập giá trị ptu : ["+i+"]["+j+"] :"));
+                arr2d[i][j]=element;
+            }
+        }
+        //tim min max
+
+        let min=arr2d[0][0];
+        let max=arr2d[0][0];
+        for(let i=0;i<arr2d.length;i++) {
+            for (let j = 0; j < arr2d[i].length; j++) {
+                if (arr2d[i][j] <min)
+                    min= arr2d[i][j];
+                if (arr2d[i][j] >max)
+                    max= arr2d[i][j];
+            }
+        }
+        //in mang
+        for(let i=0;i<arr2d.length;i++){
+            for(let j=0;j<arr2d[i].length;j++){
+                document.write(arr2d[i][j]+"  ")
+            }
+            document.write("<br>");
+        }
+        //in số lớn số bé
+        document.write("số lớn nhất trong mảng là :"+max+"</br>");
+        document.write("số nhỏ nhất trong mảng là :"+min);
+    }
+    timMinMax();
+</script>
+</body>
+</html>

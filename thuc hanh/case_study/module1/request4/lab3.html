@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số kí tự giống nhau của 2 xâu</title>
+</head>
+<body>
+<script>
+    let x1=prompt("nhập vào xâu thứ 1: ");
+    let x2=prompt("nhập vào xâu thứ 2: ");
+
+    function findWordSame(x1,x2){
+        let arr1=x1.split("");
+        let arr2=x2.split("");
+
+        let d=0;
+        for(let i=0;i<arr1.length;i++){
+                if(arr1.includes(arr2[i])){
+                    d++;
+                }
+            }
+        return d;
+    }
+
+    document.write("chuỗi thứ 1 :" +x1+"<br>");
+    document.write("chuỗi thứ 2 :" +x2+"<br>");
+    document.write("số lượng phần tử trùng trong 2 chuỗi là  :"+findWordSame(x1,x2));
+</script>
+</body>
+</html>

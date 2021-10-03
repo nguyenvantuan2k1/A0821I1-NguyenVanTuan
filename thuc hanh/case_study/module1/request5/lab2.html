@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let row = parseInt(prompt("nhập số hàng :"));
+    let col = parseInt(prompt("nhập số cột :"));
+
+    let arr2d = new Array(row);
+
+    function check(n) {
+        if (n <= 1) return false;
+        for (let i = 2; i < (n / 2) + 1; i++)
+            if (n % i == 0)
+                return false;
+        return true;
+    }
+
+    function nguyenTo() {
+        for (let i = 0; i < arr2d.length; i++) {
+            arr2d[i] = new Array(col);
+            for (let j = 0; j < arr2d[i].length; j++) {
+                let element = parseInt(prompt("nhập giá trị ptu : [" + i + "][" + j + "] :"));
+                arr2d[i][j] = element;
+            }
+        }
+        let s = " ";
+        let d = 0;
+        for (let i = 0; i < arr2d.length; i++) {
+            for (let j = 0; j < arr2d[i].length; j++) {
+                if (check(arr2d[i][j]) == true) {
+                    s += arr2d[i][j] + " ";
+                    d++;
+                }
+            }
+        }
+        //in mang
+        for (let i = 0; i < arr2d.length; i++) {
+            for (let j = 0; j < arr2d[i].length; j++) {
+                document.write(arr2d[i][j] + "  ")
+            }
+            document.write("<br>");
+        }
+        //in ket qua
+        document.write("các số nguyên tố trong mảng là :" + s);
+        document.write("  số lượng :" + d);
+    }
+
+nguyenTo();
+</script>
+</body>
+</html>

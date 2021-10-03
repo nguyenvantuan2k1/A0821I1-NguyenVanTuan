@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra chuỗi đối xứng</title>
+</head>
+<body>
+<script>
+    function isPalindrome(str)
+    {
+
+        let arr = str.split("");
+
+        if (arr.length <= 1) {
+            return true;
+        } else {
+            if (arr[0] === arr[arr.length - 1]) {
+                arr.shift();
+                arr.pop();
+                str = arr.join("");
+                return isPalindrome(str);
+            } else {
+                return false;
+            }
+        }
+    }
+    let x=prompt("nhập vào 1 chuỗi");
+    let n=x.length;
+    if(isPalindrome(x,n))
+        alert("chuỗi đối xứng")
+    else
+        alert("chuỗi không đối xứng");
+</script>
+</body>
+</html>

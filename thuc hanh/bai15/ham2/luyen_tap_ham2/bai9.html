@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr=[];
+    function inputArray(n){
+        for(let i=0;i<n;i++){
+            let tmp=prompt("nhập vào gtr phần tử thứ "+i);
+            arr[i]=tmp;
+        }
+        return arr;
+    }
+    let n= prompt("nhập vào số lượng phần tử :");
+    inputArray(n);
+    let str=prompt("nhập vào 1 kí tự :");
+    function  check(str){
+        let d=0;
+        for(element of arr){
+            if(str==element)
+                d++;
+        }
+        return (d==0)?-1:d;
+    }
+    document.write("ptu trong mảng  :" +arr.toString()+"</br>");
+    document.write("kí tự muốn kiểm tra  :" +str+"</br>");
+    document.write("số lần xuất hiện của kí tự đó là : "+check(str));
+</script>
+</body>
+</html>

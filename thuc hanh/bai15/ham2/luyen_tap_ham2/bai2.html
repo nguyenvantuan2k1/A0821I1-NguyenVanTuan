@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hàm tính chu vi và diện tích hình tròn</title>
+</head>
+<body>
+<script>
+  function perimeter(x){
+    return parseFloat(2*Math.PI*x).toFixed(2);
+  }
+  function area(x){
+      return parseFloat(Math.PI*x*x).toFixed(2);
+  }
+  let x;
+  do {
+      x = prompt("nhập bán kính hình tròn :");
+  }while (x<=0);
+  document.write("Diện tích hình tròn là : "+area(x)+"</br>");
+  document.write("Chu vi hình tròn là : "+perimeter(x)+"</br>");
+</script>
+</body>
+</html>

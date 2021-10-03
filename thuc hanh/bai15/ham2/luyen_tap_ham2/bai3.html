@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm tính giai thừa</title>
+</head>
+<body>
+<script>
+    function  gt(x){
+        if(x==0) return 1;
+        else return x*gt(x-1);
+    }
+    let x;
+    do {
+        x = prompt("nhập vào một số nguyên dương :");
+    }while (x<=0);
+    document.write(x+" giai thua = "+gt(x));
+</script>
+</body>
+</html>

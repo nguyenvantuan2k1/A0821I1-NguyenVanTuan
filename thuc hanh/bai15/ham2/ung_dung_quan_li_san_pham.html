@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng quản lí sản phẩm</title>
+    <style>
+        tr:nth-child(even)
+        {
+            background-color: darkgrey;
+            color: black;
+        }
+        button{
+            background-color: forestgreen;
+            color: white;
+            height: 30px;
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+<h1>PHONE STORE MANAGER</h1>
+</br>
+<label>Add New Product</label>
+<input type="text" placeholder="New Product" id="input">
+<button type="button" onclick="input()">Add</button>
+</br>
+<h2>DISPLAY ALL PRODUCT</h2>
+<a>PRODUCT NAME <a id="size" style="padding-left: 100px; color: red"></a></a>
+<p id="display"></p>
+</body>
+<script>
+    let product = ["samsung", "iphone 6", "iphone 11", "xiaomi", "oppo", "vertu"]
+    function display() {
+        let table = "<table CELLSPACING='0px'  cellpadding='20px'>"
+        document.getElementById("size").innerText = product.length + " product";
+
+        for (let i = 0; i < product.length; i++) {
+            table += "<tr><td><h3>" + product[i] + "</h3></td>"
+            table += "<td><button type='button' onclick='Edit("+i+")'>Edit</button></td>"
+            table += "<td><button type='button' onclick='Delete("+i+")'>Delete</button></td></tr>"
+        }
+        table += "</table>";
+        document.getElementById("display").innerHTML = table;
+    }
+    display();
+    function input(){
+        let product=document.getElementById("input").value;
+        if(product==""){
+            alert("PLEASE ENTER NEW PRODUCT !!")
+        }else {
+            product.push(document.getElementById("input").value);
+            document.getElementById("input").value = "";
+            display();
+        }
+    }
+    function Edit(i){
+        let name=prompt("CHANGE NAME'S PRODUCT :");
+        while(name==""){
+            name=prompt("DO NOT EMPTY. PLEASE ENTER NAME'S PRODUCT :")
+        }
+        product[i]=name;
+        display();
+    }
+    function Delete(i){
+        let check= confirm("DO YOU WANT DELETE "+product[i]+" ?")
+        if(check){
+            product.splice(i,1);
+            display();
+        }
+    }
+</script>
+</html>

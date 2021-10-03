@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra 1 kí tự có phải là số không ?</title>
+</head>
+<body>
+<script>
+        function isNumeric(s) {
+            return !isNaN(s - parseFloat(s));
+        }
+        let n= prompt("nhập vào một kí tự :");
+        isNumeric(n)?document.write("là một số"):document.write("không phải kí tự số");
+</script>
+</body>
+</html>

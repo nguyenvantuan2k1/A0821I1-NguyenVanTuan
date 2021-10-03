@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hàm truyền vào 1 mảng số nguyên sau đó đảo ngược nó</title>
+</head>
+<body>
+<script>
+    let arr=[];
+    function inputArray(n){
+        for(let i=0;i<n;i++){
+            let tmp=prompt("nhập vào gtr phần tử thứ "+i);
+            arr[i]=tmp;
+        }
+        return arr.reverse();
+    }
+    let n= prompt("nhập vào số lượng phần tử :");
+    inputArray(n);
+    document.write(arr.toString());
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp hình tròn</title>
+</head>
+<body>
+<script>
+    class Circle{
+        constructor(radius) {
+            this.radius=radius;
+            //this.color=color;
+        }
+        getRadius(){
+            return this.radius;
+        }
+        getArea(){
+            return parseFloat(Math.PI*this.radius*this.radius).toFixed(2);
+        }
+        toString(){
+            return "ban kinh "+this.radius+" dien tich :"+this.getArea()+"<br>";
+        }
+    }
+    let c= new Circle(2);
+    document.write(c.toString());
+    let d= new Circle(4);
+    document.write(d.toString());
+
+</script>
+</body>
+</html>

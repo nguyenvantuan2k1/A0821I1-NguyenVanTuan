@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp điện thoại</title>
+    <style>
+        button{
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+<script>
+    let tinnhan="";
+    class  DienThoai {
+        constructor(status,battery, memoryArea1, memoryArea2, memoryArea3) {
+            this.status = status;
+            this.battery = battery;
+            this.memoryArea1 = memoryArea1;
+            this.memoryArea2 = memoryArea2;
+            this.memoryArea3 = memoryArea3;
+        }
+
+        getStatus() {
+            return this.status;
+        }
+
+        setStatus(value) {
+            this.status = value;
+        }
+
+        getBattery() {
+            return this.battery;
+        }
+
+        setBattery(value) {
+            this.battery = value;
+        }
+
+        getMemoryArea1() {
+            return this.memoryArea1;
+        }
+
+        setMemoryArea1(value) {
+            this.memoryArea1 = value;
+        }
+
+        getMemoryArea2() {
+            return this.memoryArea2;
+        }
+
+        setMemoryArea2(value) {
+            this.memoryArea2 = value;
+        }
+
+        getMemoryArea3() {
+            return this.memoryArea3;
+        }
+
+        setMemoryArea3(value) {
+            this.memoryArea3 = value;
+        }
+
+        checkStatusOnOff() {
+         if(this.status==0)
+             return false;
+         return  true;
+        }
+        checkBattery(){
+            if(this.battery==0)
+                return false;
+            return true;
+        }
+        turnOn() {
+            if(this.battery==0){
+                alert("điện thoại đã hết pin vui lòng cắm sạc");
+            }else {
+                alert("Điện thoại đã bật");
+                this.battery = this.battery - 1;
+                this.status = 1;
+            }
+        }
+
+        turnOf(){
+            alert("Điện thoại đã tắt");
+            this.battery=this.battery-1;
+            this.status=0;
+            if(this.battery==0) {
+                alert("điện thoại đã hết pin vui lòng cắm sạc")
+            }
+        }
+
+        charge() {
+            alert("Đang Sac Pin "+this.battery+" %");
+            this.battery++;
+        }
+
+        writeMessenger() {
+            if(this.checkStatusOnOff()==false){
+                alert("Điện thoại đang tắt vui lòng bật lên để sử dụng");
+            }else if(this.checkBattery()==0){
+                alert("điện thoại đã hết pin vui lòng cắm sạc")
+            }else {
+                this.setMemoryArea1(prompt("nhập tin nhắn"));
+                this.battery=this.battery-1;
+            }
+        }
+
+        massengerL() {
+            if(this.checkStatusOnOff()==false){
+                alert("Điện thoại đang tắt vui lòng bật lên để sử dụng");
+            }else if(this.checkBattery()==0){
+                alert("điện thoại đã hết pin vui lòng cắm sạc")
+            }else {
+                alert("Tin nhắn đã được gửi đi");
+                tinnhan=this.getMemoryArea1();
+                this.battery=this.battery-1;
+            }
+        }
+        mailBox(){
+            if(this.checkStatusOnOff()==false){
+                alert("Điện thoại đang tắt vui lòng bật lên để sử dụng");
+            }else if(this.checkBattery()==0){
+                alert("điện thoại đã hết pin vui lòng cắm sạc")
+            }else {
+                if (tinnhan == "") {
+                    alert("hộp thư trống");
+                } else {
+                    this.setMemoryArea3(tinnhan);
+                    alert("nội dung thư " + this.getMemoryArea3());
+                }
+            }
+        }
+        afterUse() {
+            if(this.checkStatusOnOff()==false){
+                alert("Điện thoại đang tắt vui lòng bật lên để sử dụng");
+            }else if(this.checkBattery()==0){
+                alert("điện thoại đã hết pin vui lòng cắm sạc")
+            }else {
+                alert("số lượng pin còn lại :" + this.battery--);
+            }
+        }
+    }
+    var mobile = new DienThoai(0,10, "100", "100", "100");
+
+    function main() {
+        mobile.turnOn();
+    }
+
+    function main1() {
+        mobile.turnOf();
+    }
+
+    function main2() {
+        mobile.charge();
+    }
+
+    function main3() {
+        mobile.writeMessenger();
+    }
+
+    function main4() {
+        mobile.massengerL();
+    }
+    function main5() {
+        mobile.afterUse();
+    }
+    function main6(){
+        mobile.mailBox();
+    }
+    var iphone = new DienThoai(0,10, 100, 100, 100);
+
+    function maini() {
+        iphone.turnOn();
+    }
+
+    function maini1() {
+        iphone.turnOf();
+    }
+
+    function maini2() {
+        iphone.charge();
+    }
+
+    function maini3() {
+        iphone.writeMessenger();
+    }
+
+    function maini4() {
+        iphone.massengerL();
+    }
+    function maini5() {
+        iphone.afterUse();
+    }
+    function maini6(){
+        iphone.mailBox();
+    }
+</script>
+<font style="margin-left: 280px; color: #4CAF50;" > This my phone </font>
+<table border="1">
+    <th><button type="button" onclick="main()">BẬT</button></th>
+    <th><button type="button" onclick="main1()">TẮT</button></th>
+    <th><button type="button" onclick="main2()"> SẠC PIN</button></th>
+    <th><button type="button" onclick="main3()"> SOẠN TIN NHẮN</button></th>
+    <th><button type="button" onclick="main4()"> GỬI</button></th>
+    <th><button type="button" onclick="main5()"> PIN</button></th>
+    <th><button type="button" onclick="main6()"> HỘP THƯ</button></th>
+</table>
+<br>
+<br>
+<font style="margin-left: 280px; color: #4CAF50;" > This my friend phone </font>
+<table border="1">
+    <th><button type="button" onclick="maini()">BẬT</button></th>
+    <th><button type="button" onclick="maini1()">TẮT</button></th>
+    <th><button type="button" onclick="maini2()"> SẠC PIN</button></th>
+    <th><button type="button" onclick="maini3()"> SOẠN TIN NHẮN</button></th>
+    <th><button type="button" onclick="maini4()"> GỬI</button></th>
+    <th><button type="button" onclick="maini5()"> PIN</button></th>
+    <th><button type="button" onclick="maini6()"> HỘP THƯ</button></th>
+</table>
+</body>
+</html>

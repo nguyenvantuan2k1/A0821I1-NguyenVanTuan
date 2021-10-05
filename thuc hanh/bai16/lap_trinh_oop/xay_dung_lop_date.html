@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp date</title>
+</head>
+<body>
+<script>
+
+    class MyDate {
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+
+        getDay() {
+            return this.day;
+        }
+
+        setDay(value) {
+            this.day = value;
+        }
+
+        getMonth() {
+            return this.month;
+        }
+
+        setMonth(value) {
+            this.month = value;
+        }
+
+        getYear() {
+            return this.year;
+        }
+
+        setYear(value) {
+            this.year = value;
+        }
+
+        setDate(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+        toString(){
+            return "ngay "+this.day+"  thang  "+this.month+"  nam "+this.year;
+        }
+    }
+
+    let date= new MyDate(10,8,2001);
+    document.write("ngay :"+ date.getDay()+"<br>");
+    document.write("thang :"+ date.getMonth()+"<br>");
+    document.write("nam :" +date.getYear()+"<br>");
+
+    document.write(date.toString());
+</script>
+</body>
+</html>

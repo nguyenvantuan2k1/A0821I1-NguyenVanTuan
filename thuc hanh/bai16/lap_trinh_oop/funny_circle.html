@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vẽ đối tượng hình tròn</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"/>
+<script>
+    class  Circle{
+        constructor(x,y,radius) {
+            this.x=x;
+            this.y=y;
+            this.radius=radius;
+        }
+    draw(){
+        var ctx = document.getElementById("myCanvas").getContext("2d");
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+        ctx.fill();
+    }
+       getRandomHex(){
+            return Math.floor(Math.random()*255);
+        }
+        getRandomColor(){
+            var red = this.getRandomHex();
+            var green = this.getRandomHex();
+            var blue = this.getRandomHex();
+            return "rgb(" + red + "," + blue + "," + green +")";
+        }
+    drawColor(){
+        var ctx = document.getElementById("myCanvas").getContext("2d");
+        ctx.beginPath();
+        var color = this.getRandomColor();
+        ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+        ctx.fillStyle = color;
+        ctx.fill();
+    }
+        createCircle(){
+            var ctx = document.getElementById("myCanvas").getContext("2d");
+            this.radius = Math.floor(Math.random() * 80);
+            var color = this.getRandomColor();
+            this.x = Math.random() * window.innerWidth;
+            this.y = Math.random() * window.innerHeight;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+            ctx.fillStyle = color;
+            ctx.fill();
+        }
+
+       createMultipleCircle(){
+            for(var i = 0; i < 30; i++){
+                this.createCircle();
+            }
+        }
+    }
+    let c1= new Circle(100,100,50);
+    c1.createMultipleCircle();
+
+
+</script>
+</body>
+</html>

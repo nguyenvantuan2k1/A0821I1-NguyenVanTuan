@@ -110,16 +110,14 @@
                 this.battery=this.battery-1;
             }
         }
-
-        massengerL() {
+        sendMessage(Dienthoai){
             if(this.checkStatusOnOff()==false){
                 alert("Điện thoại đang tắt vui lòng bật lên để sử dụng");
             }else if(this.checkBattery()==0){
                 alert("điện thoại đã hết pin vui lòng cắm sạc")
             }else {
-                alert("Tin nhắn đã được gửi đi");
-                tinnhan=this.getMemoryArea1();
-                this.battery=this.battery-1;
+                Dienthoai.setMemoryArea2(this.getMemoryArea1());
+                alert("tin nhắn đã được gửi đi");
             }
         }
         mailBox(){
@@ -128,11 +126,10 @@
             }else if(this.checkBattery()==0){
                 alert("điện thoại đã hết pin vui lòng cắm sạc")
             }else {
-                if (tinnhan == "") {
+                if (this.getMemoryArea2() == "") {
                     alert("hộp thư trống");
                 } else {
-                    this.setMemoryArea3(tinnhan);
-                    alert("nội dung thư " + this.getMemoryArea3());
+                    alert("nội dung thư " + this.getMemoryArea2());
                 }
             }
         }
@@ -146,8 +143,8 @@
             }
         }
     }
-    var mobile = new DienThoai(0,10, "100", "100", "100");
-
+    var mobile = new DienThoai(0,10, "", "", "");
+    var iphone = new DienThoai(0,10, "", "", "");
     function main() {
         mobile.turnOn();
     }
@@ -165,7 +162,7 @@
     }
 
     function main4() {
-        mobile.massengerL();
+        mobile.sendMessage(iphone);
     }
     function main5() {
         mobile.afterUse();
@@ -173,7 +170,7 @@
     function main6(){
         mobile.mailBox();
     }
-    var iphone = new DienThoai(0,10, 100, 100, 100);
+
 
     function maini() {
         iphone.turnOn();
@@ -192,7 +189,7 @@
     }
 
     function maini4() {
-        iphone.massengerL();
+        iphone.sendMessage(mobile);
     }
     function maini5() {
         iphone.afterUse();

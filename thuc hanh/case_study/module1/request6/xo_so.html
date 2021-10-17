@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chương trình quay xổ số</title>
+</head>
+<body>
+<h3>số hệ thống</h3>
+<p id="giaithuong"></p>
+<h3>Vé của người chơi</h3>
+<button type="button" onclick="mua()">mua vé</button>
+<button type="button" onclick="quay()">quay</button>
+<p id="ve"></p>
+<script>
+    let table = "<table border='1px solid black' cellpadding='20px'>"
+    let arr= new Array();
+
+    class VeSo {
+        constructor(num1, num2, num3, num4, num5, num6) {
+            this.num1 = num1;
+            this.num2 = num2;
+            this.num3 = num3;
+            this.num4 = num4;
+            this.num5 = num5;
+            this.num6 = num6;
+        }
+
+        randomVe() {
+            this.num1 = Math.floor(Math.random() * 100);
+            this.num2 = Math.floor(Math.random() * 100);
+            this.num3 = Math.floor(Math.random() * 100);
+            this.num4 = Math.floor(Math.random() * 100);
+            this.num5 = Math.floor(Math.random() * 100);
+            this.num6 = Math.floor(Math.random() * 100);
+        }
+
+        hienthi() {
+            let table1 = "<table border='1px solid black' cellpadding='20px'> <tr>"
+            table1 += "<td>" + veso.num1 + "</td>"
+            table1 += "<td>" + veso.num2 + "</td>"
+            table1 += "<td>" + veso.num3 + "</td>"
+            table1 += "<td>" + veso.num4 + "</td>"
+            table1 += "<td>" + veso.num5 + "</td>"
+            table1 += "<td>" + veso.num6 + "</td></tr>"
+            table1 += "</table>";
+            document.getElementById("giaithuong").innerHTML = table1;
+        }
+        muaVe() {
+            let x = prompt("nhập số lượng vé muốn mua")
+            for (let i = 0; i < x; i++) {
+                table += "<tr>";
+                let v= new VeSo(0,0,0,0,0,0);
+                arr[i]= v;
+                for (let j = 0; j < 6; j++) {
+                    table += "<th><button type='button' onclick='change("+'i'+","+'j'+")'>0</button></th>";
+                }
+                table += "<th><button type='button' onclick='autoRand("+'i'+")'>auto random</button></th>"
+                table += "</tr>";
+            }
+            table+="</table>";
+        }
+        autoRand(i){
+            arr[i].randomVe();
+            console.log(arr[i]);
+        }
+        change(i,j){
+            let x= prompt("nhập số muốn đổi :");
+        }
+    }
+
+    let a = new VeSo(0, 0, 0, 0, 0,0);
+    let b = new VeSo(0, 0, 0, 0, 0,0);
+
+    function mua() {
+        b.muaVe();
+        b.randomVe();
+        document.getElementById("ve").innerHTML = table;
+    }
+
+    function quay() {
+        a.randomVe();
+        a.hienthi();
+    }
+</script>
+</body>
+</html>

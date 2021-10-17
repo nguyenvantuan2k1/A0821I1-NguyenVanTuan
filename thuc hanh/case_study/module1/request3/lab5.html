@@ -19,6 +19,7 @@
 <script>
     let price=[20000,30000,30000,30000,10000,40000];
     let bill=[];
+    var s=0;
     function choice(){
         do{
             let chosse = parseInt(prompt("mời quý khách chọn số"));
@@ -54,13 +55,15 @@
                     break;
                 }
                 default: {
-                    document.write("<h3>hóa đơn</h3>")
+                    document.write("<h3>hóa đơn</h3> <br>");
                     for(let i=0;i<bill.length;i++){
-                        if(i%2==0){
-                            document.write("</br>");
+                        if(i%2==0) document.write("<br>")
+                        if(!isNaN(parseFloat(bill[i])) && !isNaN(bill[i] - 0)){
+                            s+=bill[i];
                         }
                         document.write(bill[i] +" ");
                     }
+                    document.write("<br> Thành tiền :"+s);
                     return 0;
                 }
             }

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xổ số</title>
+</head>
+<body>
+<h3>số hệ thống</h3>
+<p id="giaithuong"></p>
+<h3>Vé của người chơi</h3>
+<button type="button" onclick="mua()">mua vé</button>
+<button type="button" onclick="quay()">quay</button>
+<p id="ve"></p>
+<script>
+    class VeSo {
+        constructor(num1, num2, num3, num4, num5, num6) {
+            this.num1 = num1;
+            this.num2 = num2;
+            this.num3 = num3;
+            this.num4 = num4;
+            this.num5 = num5;
+            this.num6 = num6;
+        }
+
+        randomVe() {
+            this.num1 = Math.floor(Math.random() * 100);
+            this.num2 = Math.floor(Math.random() * 100);
+            this.num3 = Math.floor(Math.random() * 100);
+            this.num4 = Math.floor(Math.random() * 100);
+            this.num5 = Math.floor(Math.random() * 100);
+            this.num6 = Math.floor(Math.random() * 100);
+        }
+        hienthi(){
+        }
+    }
+    class HeThong extends VeSo{
+        constructor(veso) {
+            super();
+            this.veso=veso;
+        }
+        quay(){
+            veso.randomVe();
+        }
+       hienthi(veso) {
+            let table1 = "<table border='1px solid black' cellpadding='20px'> <tr>"
+            table1 += "<td>" + veso.num1 + "</td>"
+            table1 += "<td>" + veso.num2 + "</td>"
+            table1 += "<td>" + veso.num3 + "</td>"
+            table1 += "<td>" + veso.num4 + "</td>"
+            table1 += "<td>" + veso.num5 + "</td>"
+            table1 += "<td>" + veso.num6 + "</td></tr>"
+            table1 += "</table>";
+            document.getElementById("giaithuong").innerHTML =table1;
+        }
+        check(){
+        }
+    }
+    class NguoiChoi extends VeSo{
+        constructor(arr) {
+            super();
+            this.arr=arr;
+
+        }
+        muaVeSo(){
+            let table="<table border='1px solid black' cellpadding='20px'> <tr>";
+
+            let x= prompt("nhập số lượng vé muốn mua");
+            for(let i=0;i<x;i++){
+                let t= new VeSo(0,0,0,0,0,0);
+                arr[i]=t;
+            }
+            for(let i=0;i<x;i++){
+
+            }
+        }
+        hienthi(){
+            let table2 = "<table border='1px solid black' cellpadding='20px'>"
+            for(let i=0;i<x;i++) {
+            }
+        }
+    }
+    let a = new VeSo(0, 0, 0, 0, 0,0);
+    let b= new HeThong(a);
+    function mua() {
+    }
+
+    function quay() {
+        a.randomVe();
+        b.hienthi(a);
+    }
+</script>
+</body>
+</html>

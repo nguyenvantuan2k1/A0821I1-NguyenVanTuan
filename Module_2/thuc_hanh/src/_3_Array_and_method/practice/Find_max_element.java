@@ -2,7 +2,7 @@ package _3_Array_and_method.practice;
 
 import java.util.Scanner;
 
-public class find_max_element {
+public class Find_max_element {
     public static void main(String[] args) {
         int size;
         int[] array;

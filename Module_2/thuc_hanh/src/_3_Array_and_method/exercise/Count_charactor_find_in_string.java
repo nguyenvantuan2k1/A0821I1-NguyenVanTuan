@@ -1,8 +1,10 @@
 package _3_Array_and_method.exercise;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Count_charactor_find_in_string {
+
     public static void main(String[] args) {
         String chuoi;
         int count = 0;
@@ -20,5 +22,7 @@ public class Count_charactor_find_in_string {
         }
 
         System.out.println("sum of  " + kyTu + " you can find in " + chuoi + " is : " + count);
+
+
     }
 }

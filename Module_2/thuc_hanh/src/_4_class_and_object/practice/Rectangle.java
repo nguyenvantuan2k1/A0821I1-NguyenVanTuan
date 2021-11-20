@@ -2,12 +2,28 @@ package _4_class_and_object.practice;
 
 import java.util.Scanner;
 
-public class Rectangle {
-    double height;
-    double width;
+public  class Rectangle {
+    protected double height;
+    protected double width;
 
     public Rectangle() {
         ;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
     }
 
     public Rectangle(double width, double height) {
@@ -19,7 +35,7 @@ public class Rectangle {
         return this.width * this.height;
     }
 
-    public double getPerimeter() {
+     double getPerimeter() {
         return (this.width + this.height) * 2;
     }
 
@@ -29,20 +45,25 @@ public class Rectangle {
                 ", width=" + width +
                 '}';
     }
-    public static void printCalendar(int month, int year){
+
+    public static void printCalendar() {
 
     }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         System.out.print("Enter the width:");
         double width = scanner.nextDouble();
         System.out.print("Enter the height:");
         double height = scanner.nextDouble();
+    printCalendar();
         Rectangle rectangle = new Rectangle(width, height);
-        System.out.println("Your Rectangle \n"+ rectangle.display());
-        System.out.println("Perimeter of the Rectangle: "+ rectangle.getPerimeter());
-        System.out.println("Area of the Rectangle: "+ rectangle.getArea());
+        System.out.println(rectangle.display());
 
+        System.out.println("Your Rectangle \n" + rectangle.display());
+        System.out.println("Perimeter of the Rectangle: " + rectangle.getPerimeter());
+        System.out.println("Area of the Rectangle: " + rectangle.getArea());
 
     }
 }

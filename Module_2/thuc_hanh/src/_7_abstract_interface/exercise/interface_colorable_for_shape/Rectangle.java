@@ -1,9 +1,11 @@
 package _7_abstract_interface.exercise.interface_colorable_for_shape;
 
 public class Rectangle extends Shape {
+    //thuộc tính
     private double width = 1.0;
     private double length = 1.0;
 
+    //contructor : để new đối tượng
     public Rectangle() {
     }
 
@@ -18,6 +20,7 @@ public class Rectangle extends Shape {
         this.length = length;
     }
 
+    //các phương thức
     public double getWidth() {
         return width;
     }

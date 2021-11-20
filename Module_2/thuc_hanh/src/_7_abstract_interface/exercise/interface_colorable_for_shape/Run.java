@@ -8,13 +8,13 @@ public class Run {
         shapes[1] = new Rectangle(x, x, "infinity", true);
         System.out.println("before :");
         for (Shape a : shapes){
-            System.out.println(a);
+            System.out.println(a.toString());
         }
 
-        for (Shape a : shapes) {
-            a.resize(Math.random() * 1000);
-        }
-        System.out.println("\nafter :");
-        Shape.printShape(shapes);
+//        for (Shape a : shapes) {
+//            a.resize(Math.random() * 1000);
+//        }
+//        System.out.println("\nafter :");
+//        Shape.printShape(shapes);
     }
 }

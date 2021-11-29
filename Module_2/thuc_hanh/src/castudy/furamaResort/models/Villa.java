@@ -1,16 +1,12 @@
 package castudy.furamaResort.models;
 
-import castudy.furamaResort.services.Facility;
+import castudy.furamaResort.utils.ConstantUtil.*;
 
-public class Villa extends Facility {
-    private String standard;
-    private Double areaLake;
-    private int floors;
+public class Villa extends Fancility{
+    private RoomType roomType;
+    private double areaPool;
 
-    public Villa(String nameService, double area, double price,int quality,String hireType, String standard, double areaLake, int floors) {
-        super(nameService, area, price, quality, hireType);
-        this.standard = standard;
-        this.areaLake = areaLake;
-        this.floors = floors;
+    public Villa(int id, String code, String name, double areaUsed, double price, int maxPeople, RenType renType) {
+        super(id, code, name, areaUsed, price, maxPeople, renType);
     }
 }

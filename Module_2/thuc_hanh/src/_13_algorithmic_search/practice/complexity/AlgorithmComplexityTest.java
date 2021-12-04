@@ -1,5 +1,6 @@
 package _13_algorithmic_search.practice.complexity;
 
+import java.io.File;
 import java.util.Scanner;
 
 public class AlgorithmComplexityTest {
@@ -24,6 +25,7 @@ public class AlgorithmComplexityTest {
             }
         }
         System.out.println("The most appearing letter is '" + character + "' with a frequency of " + max + " times");
+
     }
 
 }

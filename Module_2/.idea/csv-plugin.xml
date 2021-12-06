@@ -45,6 +45,48 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\thuc_hanh\src\_17_binary_file_serialization\exercise\produce_managerment\file.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\thuc_hanh\src\_17_binary_file_serialization\exercise\produce_managerment\input.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\thuc_hanh\src\_17_binary_file_serialization\exercise\produce_managerment\output.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\thuc_hanh\src\_17_binary_file_serialization\practice\copy_file\input.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\thuc_hanh\src\_17_binary_file_serialization\practice\copy_file\output.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\thuc_hanh\src\_17_binary_file_serialization\practice\read_write_list_student\student.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>

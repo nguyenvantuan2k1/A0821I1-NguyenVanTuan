@@ -9,6 +9,7 @@ public class ProduceService {
      List<Produce> produces = new ArrayList<>();
 
     public void addProduce(Produce produce) {
+        readDataFromFile();
         produces.add(produce);
         writeToFile();
     }

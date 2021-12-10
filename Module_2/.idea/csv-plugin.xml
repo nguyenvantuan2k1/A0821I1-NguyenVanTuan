@@ -52,20 +52,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\thuc_hanh\src\_17_binary_file_serialization\exercise\produce_managerment\input.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\thuc_hanh\src\_17_binary_file_serialization\exercise\produce_managerment\output.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\thuc_hanh\src\_17_binary_file_serialization\practice\copy_file\input.csv">
           <value>
             <Attribute>

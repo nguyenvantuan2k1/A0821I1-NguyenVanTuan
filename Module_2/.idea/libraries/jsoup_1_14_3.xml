@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jsoup-1.14.3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/thuc_hanh/src/_19_string_and_regex/exercise/crawl_news/jsoup-1.14.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

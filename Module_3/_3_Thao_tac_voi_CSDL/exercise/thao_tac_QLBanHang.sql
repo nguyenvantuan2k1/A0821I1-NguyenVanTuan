@@ -64,7 +64,8 @@ select customer.cID,customer.cName,customer.cAge from customer inner join
 orderDetail on `order`.oID=orderDetail.oID
 where orderDetail.odQTY=0;
 
-select o.oID,o.oDate, od.odQTY * p.pPrice as Total_price
+select o.oID,o.oDate, sum(od.odQTY * p.pPrice) as Total_price
 from `order` o inner join
 orderDetail od on o.oID=od.oID inner join
-product p on od.pID=p.pID;
+product p on od.pID=p.pID
+group by oID;

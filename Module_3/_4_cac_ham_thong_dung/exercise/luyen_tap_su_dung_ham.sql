@@ -2,11 +2,11 @@ use quanlysinhvien;
 
 select *
 from `subject`
-having Credit >= all(select Credit from `subject`);
+having max(Credit);
 
 select * 
 from `subject` inner join mark on `subject`.SubID=mark.SubId
-having mark>=all(select mark from mark);
+having max(mark);
 
 select *, avg(mark) as 'diem trung binh'
 from student inner join mark on student.StudentId=mark.StudentId

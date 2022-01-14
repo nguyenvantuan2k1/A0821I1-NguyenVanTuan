@@ -217,7 +217,8 @@ dv.chi_phi_thue+hdct.so_luong * dvdk.gia as tong_tien
 from dich_vu dv, khach_hang kh inner join 
 hop_dong hd on kh.ma_khach_hang=hd.ma_khach_hang inner join
 hop_dong_chi_tiet hdct on hd.ma_hop_dong=hdct.ma_hop_dong inner join
-dich_vu_di_kem dvdk on hdct.ma_dich_vu_di_kem=dvdk.ma_dich_vu_di_kem;
+dich_vu_di_kem dvdk on hdct.ma_dich_vu_di_kem=dvdk.ma_dich_vu_di_kem
+group by kh.ma_khach_hang;
 
 -- 6.	Hiển thị ma_dich_vu, ten_dich_vu, dien_tich, chi_phi_thue, ten_loai_dich_vu của tất cả các loại dịch vụ 
 -- chưa từng được khách hàng thực hiện đặt từ quý 1 của năm 2021 (Quý 1 là tháng 1, 2, 3).
@@ -236,6 +237,37 @@ from hop_dong hd inner join dich_vu dv  on hd.ma_dich_vu=dv.ma_dich_vu inner joi
 loai_dich_vu ldv on dv.ma_loai_dich_vu=ldv.ma_loai_dich_vu
 where year(hd.ngay_lam_hop_dong)=2020 and year(hd.ngay_lam_hop_dong)<>2021
 group by ma_dich_vu;
+
+
+SELECT
+	se.id,
+	se. `name`,
+	se.area,
+	se.price,
+	se.max_people,
+	st. `name`
+FROM
+	service se
+	JOIN service_type st ON st.id = se.service_type_id
+WHERE
+	EXISTS (
+		SELECT
+			*
+		FROM
+			contract
+		WHERE
+			service_id = se.id
+			AND YEAR(start_date) = '2020'
+			AND YEAR(start_date))
+		AND NOT EXISTS (
+			SELECT
+				*
+			FROM
+				contract
+			WHERE
+				service_id = se.id
+				AND YEAR(start_date) = '2021'
+				AND YEAR(start_date));
 
 -- 8.	Hiển thị thông tin ho_ten khách hàng có trong hệ thống, với yêu cầu ho_ten không trùng nhau.
 

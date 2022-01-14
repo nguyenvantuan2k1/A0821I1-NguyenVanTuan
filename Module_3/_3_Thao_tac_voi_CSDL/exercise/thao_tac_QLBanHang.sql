@@ -53,16 +53,15 @@ insert into orderDetail values(1,1,3),
 select oID, oDate, oTotalPrice
 from `order`;
 
-select distinct customer.cName,product.pName
+select  customer.cName,product.pName
 from customer inner join
 `order` on customer.cID=`order`.cID inner join
 orderDetail on `order`.oID=orderDetail.oID inner join
 product on orderDetail.pID=product.pID;
 
-select customer.cID,customer.cName,customer.cAge from customer inner join
-`order` on customer.cID=`order`.cID inner join
-orderDetail on `order`.oID=orderDetail.oID
-where orderDetail.odQTY=0;
+select * from customer c where c.cID not in(
+	select o.cID from `order` o
+);
 
 select o.oID,o.oDate, sum(od.odQTY * p.pPrice) as Total_price
 from `order` o inner join

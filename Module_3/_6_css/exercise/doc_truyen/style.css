@@ -26,6 +26,7 @@ header{
     display: flex;
     justify-content: flex-start;
     margin-right: auto;
+    padding-top:20px;
 }
 
 .navbar-item.has-dropdown {
@@ -57,6 +58,7 @@ a {
     text-decoration: none;
 }
 .navbar-end {
+    padding-top:10px;
     justify-content: flex-end;
     margin-left: auto;
 }

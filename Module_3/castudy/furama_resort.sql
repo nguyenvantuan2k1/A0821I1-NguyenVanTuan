@@ -17,7 +17,7 @@ ten_bo_phan varchar(45)
 );
 
 create table nhan_vien(
-ma_nhan_vien int primary key,
+ma_nhan_vien int auto_increment primary key,
 ho_ten varchar(45),
 ngay_sinh date,
 so_cmnd varchar(45),

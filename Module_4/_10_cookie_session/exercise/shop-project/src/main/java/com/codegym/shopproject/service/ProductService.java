@@ -1,7 +1,7 @@
-package com.example.savecart1.service;
+package com.codegym.shopproject.service;
 
-import com.example.savecart1.model.Product;
-import com.example.savecart1.repository.IProductRepository;
+import com.codegym.shopproject.model.Product;
+import com.codegym.shopproject.repository.IProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,4 +22,8 @@ public class ProductService implements IProductService {
         return productRepository.findById(id);
     }
 
+    @Override
+    public Product getProductById(Long id) {
+        return productRepository.getById(id);
+    }
 }

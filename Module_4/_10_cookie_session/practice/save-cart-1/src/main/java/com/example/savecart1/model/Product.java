@@ -11,12 +11,22 @@ public class Product {
     private String name;
     private double price;
     private String description;
+    private String image;
 
-    public Product(Long id, String name, double price, String description) {
+    public Product(Long id, String name, double price, String description,String image) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.description = description;
+        this.image = image;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public Product() {

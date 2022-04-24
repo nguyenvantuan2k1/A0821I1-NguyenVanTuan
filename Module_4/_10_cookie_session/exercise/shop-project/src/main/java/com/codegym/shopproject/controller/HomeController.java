@@ -16,7 +16,7 @@ import java.util.Optional;
 public class HomeController {
     @Autowired
     IProductService productService;
-    @GetMapping("/home")
+    @GetMapping({"/home"})
     public ModelAndView HomePage(){
         ModelAndView modelAndView = new ModelAndView("index");
         modelAndView.addObject("products", productService.findAll());
@@ -39,12 +39,18 @@ public class HomeController {
         if (!productOptional.isPresent()) {
             return "/error.404";
         }
-        if (action.equals("list")) {
+        if (action.equals("show")) {
             cart.addProduct(productOptional.get());
             return "redirect:/shopping-cart";
         }
         cart.addProduct(productOptional.get());
         return "redirect:/home";
     }
-
+    @PostMapping("/addProduct")
+    public String addProduct(@RequestParam Long id, @ModelAttribute Cart cart, @RequestParam int quantity){
+        Optional<Product> productOptional = productService.findById(id);
+        cart.addProductWithQuantity(productOptional.get(),quantity);
+        System.out.println(quantity);
+        return "redirect:/shopping-cart";
+    }
 }

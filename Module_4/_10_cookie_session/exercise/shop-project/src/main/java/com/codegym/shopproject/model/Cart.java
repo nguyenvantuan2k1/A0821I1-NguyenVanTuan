@@ -25,7 +25,6 @@ public class Cart {
         }
         return false;
     }
-
     private Map.Entry<Product, Integer> selectItemInCart(Product product){
         for (Map.Entry<Product, Integer> entry : products.entrySet()) {
             if(entry.getKey().getId().equals(product.getId())){
@@ -43,6 +42,17 @@ public class Cart {
             Integer newQuantity = itemEntry.getValue() + 1;
             products.replace(itemEntry.getKey(),newQuantity);
         }
+
+    }
+    public void addProductWithQuantity(Product product,Integer Quantity) {
+        if (!checkItemInCart(product)){
+            products.put(product,1);
+        } else {
+            Map.Entry<Product, Integer> itemEntry = selectItemInCart(product);
+            Integer newQuantity = itemEntry.setValue(Quantity);
+            products.replace(itemEntry.getKey(),newQuantity);
+        }
+
     }
 
     public Integer countProductQuantity(){

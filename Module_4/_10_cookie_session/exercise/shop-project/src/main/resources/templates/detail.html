@@ -31,12 +31,19 @@
 
                 </p>
                 <div class="d-flex">
-                    <input class="form-control text-center me-3" id="inputQuantity" type="num"
-                           style="max-width: 3rem" value="1"/>
-                    <a class="btn btn-outline-dark flex-shrink-0" th:href="@{/add/__${product.id}__(action='list')}">
-                        <i class="bi-cart-fill me-1"></i>
-                        Add to cart
-                    </a>
+                    <form method="post" action="/addProduct">
+                        <input type="hidden" name="id" th:value="${product.id}">
+                        <input class="form-control text-center me-3" id="inputQuantity" type="number"
+                               style="max-width: 3rem" value="1" name="quantity"/>
+                        <button class="btn btn-outline-dark flex-shrink-0" type="submit">
+                            <i class="bi-cart-fill me-1"></i>
+                            Add to cart
+                        </button>
+                    </form>
+<!--                    <a class="btn btn-outline-dark flex-shrink-0" th:href="@{addProduct/__${product.id}__/__${product.id}__}">-->
+<!--                        <i class="bi-cart-fill me-1"></i>-->
+<!--                        Add to cart-->
+<!--                    </a>-->
                 </div>
             </div>
         </div>

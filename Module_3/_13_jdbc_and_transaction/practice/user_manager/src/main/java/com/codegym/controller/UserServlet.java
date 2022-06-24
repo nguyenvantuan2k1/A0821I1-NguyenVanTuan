@@ -97,8 +97,8 @@ public class UserServlet extends HttpServlet {
         String email = request.getParameter("email");
         String country = request.getParameter("country");
         User newUser = new User(name, email, country);
-//        userDAO.insertUser(newUser);
-        userDAO.insertUserStore(newUser);
+        userDAO.insertUser(newUser);
+//        userDAO.insertUserStore(newUser);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/create.jsp");
         dispatcher.forward(request, response);
     }

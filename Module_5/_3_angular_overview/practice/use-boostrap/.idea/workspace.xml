@@ -7,6 +7,7 @@
       <change beforePath="$PROJECT_DIR$/../../../../Module_4/_5_CSDL_and_ORM/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_4/_5_CSDL_and_ORM/practice/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../Module_4/_9_aop/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_4/_9_aop/practice/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../Module_4/castudy/furama/demo" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_4/castudy/furama/demo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +27,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../exercise" />
     <property name="ts.external.directory.path" value="D:\codegym\A0821I1-NguyenVanTuan\Module_5\_3_angular_overview\practice\use-boostrap\angular-using-bootstrap\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -45,10 +46,18 @@
       <option name="presentableId" value="Default" />
       <updated>1656337837536</updated>
       <workItem from="1656337838792" duration="1548000" />
+      <workItem from="1656392309197" duration="17000" />
+      <workItem from="1656393287713" duration="674000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="164" key="FileChooserDialogImpl" timestamp="1656392323905">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="549" y="164" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1656392323905" />
   </component>
 </project>

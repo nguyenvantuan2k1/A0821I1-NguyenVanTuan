@@ -1,0 +1,11 @@
+.foot{
+  height: 160px;
+  width: 100%;
+  background-color: aqua;
+
+}
+.foot h4{
+  text-align: center;
+  color: antiquewhite;
+  padding-top: 40px;
+}

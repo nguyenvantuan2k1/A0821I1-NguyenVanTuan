@@ -1,0 +1,15 @@
+<h3 [ngStyle]="color">List student</h3>
+<p [ngStyle]="color">id  : {{student.id}}</p>
+<p [ngStyle]="color">Tên  : {{student.name|uppercase}}</p>
+<p [ngStyle]="color">Tên  : {{student.dob|date:'dd/MM/yyy'}}</p>
+<p [ngStyle]="color">điểm  : {{student.mark}}</p>
+<p [ngStyle]="color">ảnh  : </p><img [src]="student.image" style="width: 200px; height: auto"/>
+
+<!--<input type="text" (change)="getMark($event.target.value)">-->
+<br>
+<p [ngStyle]="color">Thay đổi điểm</p>
+<input type="text" [(ngModel)]="student.mark">
+<p [ngStyle]="color">Thay đổi màu sắc</p>
+<button (click)="changColor('red')">Red</button>
+<button (click)="changColor('blue')">Blue</button>
+<button (click)="changColor('yellow')">Yellow</button>

@@ -16,8 +16,8 @@ export class CalculatorComponent implements OnInit {
   calculator = {
     displayValue: '0',
     firstOperand: 0,
-    secondOperand :0,
-    dot:false,
+    secondOperand: 0,
+    dot: false,
     tmp:0,
     operator: null,
   };

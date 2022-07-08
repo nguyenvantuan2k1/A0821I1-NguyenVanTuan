@@ -12,8 +12,8 @@ export class AppComponent {
     let interval = setInterval(() => {
       this.value = this.value + 1;
       if (this.value == 100) {
-        // clearInterval(interval);
-        this.value=0;
+          // clearInterval(interval);
+          this.value=0;
       }
     }, 100);
   }

@@ -19,7 +19,7 @@ export class CountdownTimerComponent implements OnInit {
   interval;
 
   Start() {
-    this.number=60;
+    // this.number=60;
     this.status=true;
      this.interval = setInterval(() => {
       this.number--;

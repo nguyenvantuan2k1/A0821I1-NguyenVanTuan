@@ -26,7 +26,7 @@ public class CrawlNews {
                 System.out.println(m.group(1));
             }
         } catch (MalformedURLException e) {
-            e.printStackTrace();s
+            e.printStackTrace();
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         } catch (IOException e) {

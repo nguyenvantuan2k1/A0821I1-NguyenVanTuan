@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Danh sách sản phẩm</h2>
+  <table class="table table-bordered table-striped table-responsive-stack"  id="tableOne">
+    <tr class="thead-dark">
+      <th>STT</th>
+      <th>Tên</th>
+      <th>Giá</th>
+      <th>Mô tả</th>
+    </tr>
+    <tr *ngFor="let product of products; index as i">
+      <td>{{i + 1}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.description}}</td>
+    </tr>
+  </table>
+</div>

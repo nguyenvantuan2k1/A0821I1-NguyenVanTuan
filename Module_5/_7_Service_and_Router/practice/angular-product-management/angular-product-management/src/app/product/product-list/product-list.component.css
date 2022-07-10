@@ -1,0 +1,28 @@
+.table-responsive-stack tr {
+  text-align: center;
+}
+
+
+.table-responsive-stack td,
+
+
+.table-responsive-stack .table-responsive-stack-thead {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .table-responsive-stack tr {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border-bottom: 3px solid #ccc;
+    display:block;
+
+  }
+  /*  IE9 FIX   */
+  .table-responsive-stack td {
+    float: left\9;
+    width:100%;
+  }
+}

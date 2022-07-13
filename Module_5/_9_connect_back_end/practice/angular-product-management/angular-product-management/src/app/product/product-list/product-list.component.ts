@@ -26,4 +26,10 @@ export class ProductListComponent implements OnInit {
       this.products=this.products.filter(eachProduct=>eachProduct.id!==id);
     });
   }
+  name:string;
+  id:number;
+  Xoa(name: string, id: number) {
+    this.name=name;
+    this.id=id;
+  }
 }

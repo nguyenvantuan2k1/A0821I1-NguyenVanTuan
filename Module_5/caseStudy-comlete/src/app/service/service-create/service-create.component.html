@@ -1,0 +1,70 @@
+<div class="container">
+  <h3 style="align-items: center">Create Service</h3>
+
+  <form [formGroup]="createService" (ngSubmit)="onSubmit(createService)">
+
+    <div class="form-group row">
+      <label for="inputNameService" class="col-sm-2 col-form-label">NameService</label>
+      <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+        <input type="text" class="form-control" id="inputNameService" formControlName="nameService">
+        <small *ngIf="createService.get('nameService').invalid && createService.get('nameService').touched" class="text-danger">Vui lòng nhập!!</small>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputArea" class="col-sm-2 col-form-label">Area</label>
+      <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+        <input type="text" class="form-control" id="inputArea" formControlName="area">
+        <small *ngIf="createService.get('area').invalid && createService.get('area').touched" class="text-danger">Vui lòng nhập!!</small>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputFloor" class="col-sm-2 col-form-label">Floor</label>
+      <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+        <input type="text" class="form-control" id="inputFloor" formControlName="floor">
+        <small *ngIf="createService.get('floor').invalid && createService.get('floor').touched" class="text-danger">Vui lòng nhập!!</small>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputMaxPerson" class="col-sm-2 col-form-label">Max Person</label>
+      <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+        <input type="text" class="form-control" id="inputMaxPerson" formControlName="maxPerson">
+        <small *ngIf="createService.get('maxPerson').invalid && createService.get('maxPerson').touched" class="text-danger">Vui lòng nhập!!</small>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputTotal" class="col-sm-2 col-form-label">Cost Total</label>
+      <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+        <input type="text" class="form-control" id="inputTotal" formControlName="total">
+        <small *ngIf="createService.get('total').invalid && createService.get('total').touched" class="text-danger">Vui lòng nhập!!</small>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Service Type</label>
+      <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+        <select class="custom-select" formControlName="serviceType">
+          <option *ngFor="let items of serviceTypeList" [ngValue]="items">{{items.name}}</option>
+        </select>
+        <small *ngIf="createService.get('serviceType').invalid && createService.get('serviceType').touched" class="text-danger">Vui lòng nhập!!</small>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputStatus" class="col-sm-2 col-form-label">Status</label>
+      <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+        <input type="text" class="form-control" id="inputStatus" formControlName="status">
+        <small *ngIf="createService.get('status').invalid && createService.get('status').touched" class="text-danger">Vui lòng nhập!!</small>
+      </div>
+    </div>
+
+    <div class="_buttonSubmit">
+      <a [routerLink]="['/list-service']" >back</a>
+      <div class="_back">
+        <button [disabled]="createService.invalid" type="submit" class="btn btn-success">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+

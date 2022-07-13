@@ -1,0 +1,29 @@
+/*css title*/
+.\.title{
+  font-family: "Bradley Hand";
+  font-size: 40px;
+  color: aliceblue;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+/*start nav*/
+nav > a {
+  color: white;
+}
+nav > a:hover {
+  color: black;
+  background: wheat;
+}
+li:hover > a{
+  background: wheat;
+}
+
+div > ul.mr-auto > li.nav-item > a.nav-link {
+  font-size: 20px;
+  color: white;
+  padding: 0 24px;
+}
+div > ul.mr-auto > li.nav-item:hover > a.nav-link {
+  color: black;
+}
+/*end nav*/

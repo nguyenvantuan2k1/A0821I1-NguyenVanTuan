@@ -3,18 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductListComponent } from './product/product-list/product-list.component';
-import { ProductCreateComponent } from './product/product-create/product-create.component';
+
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { ProductUpdateComponent } from './product/product-update/product-update.component';
+
 import {HttpClientModule} from "@angular/common/http";
+import { StudentCreateComponent } from './student/student-create/student-create.component';
+import { StudentEditComponent } from './student/student-edit/student-edit.component';
+import { StudentListComponent } from './student/student-list/student-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent,
-    ProductCreateComponent,
-    ProductUpdateComponent,
+    StudentCreateComponent,
+    StudentEditComponent,
+    StudentListComponent,
   ],
   imports: [
     BrowserModule,

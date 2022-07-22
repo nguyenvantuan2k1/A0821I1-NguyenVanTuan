@@ -1,40 +1,137 @@
 {
-  "product": [
+  "group": [
+    {
+      "id": 1,
+      "name": "nhom 1"
+    },
     {
       "id": 2,
-      "name": "Iphone 13 Pro",
-      "price": 6000,
-      "description": "new"
+      "name": "nhom 2"
     },
     {
       "id": 3,
-      "name": "SamSung Glaxy note 11",
-      "price": 5500,
-      "description": "new"
+      "name": "nhom 3"
+    }
+  ],
+  "student": [
+    {
+      "id": 2500,
+      "name": "Nguyen Van Tuan",
+      "group": {
+        "id": 3,
+        "name": "nhom 3"
+      },
+      "detai": "quan ly",
+      "teacher": {
+        "id": 1,
+        "name": "Nguyen A"
+      },
+      "email": "tuan94pth@gmail.com",
+      "phone": "0123213232"
     },
     {
-      "id": 4,
-      "name": "SamSung A10",
-      "price": 1500,
-      "description": "new"
+      "id": 2501,
+      "name": "Nguyen Thi A",
+      "group": {
+        "id": 3,
+        "name": "nhom 3"
+      },
+      "detai": "The Thao",
+      "teacher": {
+        "id": 2,
+        "name": "Nguyen A"
+      },
+      "email": "nguyenA@gmail.com",
+      "phone": "0123213232"
     },
     {
-      "id": 5,
-      "name": "SamSung A50",
-      "price": 4500,
-      "description": "new"
+      "id": 2502,
+      "name": "Nguyen Thi X",
+      "group": {
+        "id": 2,
+        "name": "nhom 2"
+      },
+      "detai": "The Thao",
+      "teacher": {
+        "id": 1,
+        "name": "Nguyen Tuan"
+      },
+      "email": "nguyenA@gmail.com",
+      "phone": "0123213232"
     },
     {
-      "id": 6,
-      "name": "SamSung Pro Max",
-      "price": 5500,
-      "description": "new"
+      "id": 2503,
+      "name": "Thu Di Dong Den",
+      "group": {
+        "id": 2,
+        "name": "nhom 2"
+      },
+      "detai": "The Thao",
+      "teacher": {
+        "id": 2,
+        "name": "Nguyen A"
+      },
+      "email": "Dong@gmail.com",
+      "phone": "0123213232"
     },
     {
-      "id": 7,
-      "name": "Iphone 5",
-      "price": 3000,
-      "description": "new"
+      "id": "2504",
+      "name": "Nguyen V",
+      "group": {
+        "id": 2,
+        "name": "nhom 2"
+      },
+      "detai": "testing",
+      "teacher": {
+        "id": 1,
+        "name": "Nguyen Tuan"
+      },
+      "email": "v@gmail.com",
+      "phone": "0123321233"
+    },
+    {
+      "id": "2505",
+      "name": "Nguyen Thi Na",
+      "group": {
+        "id": 1,
+        "name": "nhom 1"
+      },
+      "detai": "nghien cuu khoa học",
+      "teacher": {
+        "id": 1,
+        "name": "Nguyen Tuan"
+      },
+      "email": "Na@gmail.com",
+      "phone": "01235955709"
+    },
+    {
+      "id": "2506",
+      "name": "Tran Thi B",
+      "group": {
+        "id": 2,
+        "name": "nhom 2"
+      },
+      "detai": "Nghien Cuu",
+      "teacher": {
+        "id": 2,
+        "name": "Nguyen A"
+      },
+      "email": "B@gmail.com",
+      "phone": "0123213214"
+    }
+  ],
+  "teacher": [
+    {
+      "id": 1,
+      "name": "Nguyen Tuan"
+    },
+    {
+      "id": 2,
+      "name": "Nguyen A"
+    },
+    {
+      "id": 3,
+      "name": "Nguyen B"
     }
   ]
 }
